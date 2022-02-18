@@ -8,6 +8,7 @@ module Api
 
       def show
         @request = Request.find(params[:id])
+        json_response(@request)
       end
 
       def create

@@ -7,17 +7,18 @@ module Api
       end
 
       def show
-
+        @description = Description.find(params[:id])
+        json_response(@description)
       end
 
-      def create
-      end
+  #     def create
+  #     end
 
-      def update
-      end
+  #     def update
+  #     end
 
-      def destroy
-      end
+  #     def destroy
+  #     end
     end
   end
 end
