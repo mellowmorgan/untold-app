@@ -18,7 +18,7 @@ module Api
   #     end
 
   #     def destroy
-  #     end
+  #     end private def description_params params.permit
     end
   end
 end

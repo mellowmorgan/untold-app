@@ -12,7 +12,7 @@ module Api
       end
 
       def create
-        if @request.create!(request_params)
+        if Request.create!(request_params)
           render status: 200, json: {
           message: "Request added successfully."
           }
@@ -39,7 +39,7 @@ module Api
       end
       private
       def request_params
-        params.require(:request).permit(:user_id,:content,:status)
+        params.permit(:user_id, :content, :status)
       end
     end
   end
