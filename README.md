@@ -35,7 +35,7 @@ Things you may want to cover:
 * 11:00: Testing
 * 1:00: Devise set up authentication controllers
 * 2:00: Work on API requests
-* 3:00: Watch Youtube video CRUD React 1 hour
+* 3:30: Watch Youtube video CRUD React 1 hour
 * 4:30-5:30 Watch Devise tutorial to better understand 1 hour
 
 #### Friday, 02/19

@@ -1,4 +1,10 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
-  before_action :authenticate_user!
+  include Response
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+    json_response({ message: exception.message }, :not_found)
+  end
+  rescue_from ActiveRecord::RecordInvalid do |exception|
+    json_response({ message: exception.message }, :unprocessable_entity)
+  end
 end
+
