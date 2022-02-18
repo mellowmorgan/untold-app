@@ -26,12 +26,16 @@ Things you may want to cover:
 ![database schema image](./public/sqldesign.png)
 
 ### Research & Planning Log
-#### Friday, 08/
+#### Friday, 02/18
 * 8:30: Create app with webpacker=react flag
 * 8:45: Capstone proposal 
 * 9:00: Plan database with sqldesigner, add to readme
 * 9:45: Start building out database ?
 * 10:45: Set up Devise ?
 * 11:00: Testing
-* 1:00: Watch Youtube video CRUD React 1 hour
-* 2:00: 
+* 1:00: Devise set up authentication controllers
+* 3:00: Watch Youtube video CRUD React 1 hour
+* 4:30-5:30 Watch Devise tutorial to better understand 1 hour
+
+#### Friday, 02/19
+* 1:00: Work on API, test endpoints in Postman 1 hour
