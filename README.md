@@ -23,8 +23,13 @@ Things you may want to cover:
 
 * ...
 
+![database schema image](./public/sqldesign.png)
+
 ### Research & Planning Log
 #### Friday, 08/
 * 8:30: Create app with webpacker=react flag
 * 8:45: Capstone proposal 
-* 9:00: Plan database with sqldesigner
+* 9:00: Plan database with sqldesigner, add to readme
+* 9:45: Start building out database ?
+* 10:45: Set up Devise ?
+* 1:00: Watch Youtube video CRUD React ?
