@@ -32,4 +32,6 @@ Things you may want to cover:
 * 9:00: Plan database with sqldesigner, add to readme
 * 9:45: Start building out database ?
 * 10:45: Set up Devise ?
-* 1:00: Watch Youtube video CRUD React ?
+* 11:00: Testing
+* 1:00: Watch Youtube video CRUD React 1 hour
+* 2:00: 
