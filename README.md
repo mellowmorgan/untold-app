@@ -35,8 +35,11 @@ Things you may want to cover:
 * 11:00: Testing
 * 1:00: Devise set up authentication controllers
 * 2:00: Work on API requests
-* 3:30: Watch Youtube video CRUD React 1 hour
-* 4:30-5:30 Watch Devise tutorial to better understand 1 hour
+* 3:30: Watch Youtube video CRUD React 40 minutes https://www.youtube.com/watch?v=oyjzi837wME&t=243s
 
-#### Friday, 02/19
-* 1:00: Work on API, test endpoints in Postman 1 hour
+
+#### Saturday, 02/19
+* 1:00: Work on API, test endpoints in Postman 1 hour ?
+* 6:30-7:30 Find and watch a Devise React tutorial to better understand 1 hour
+#### Sunday, 02/20
+* 1:00: Work on API, test endpoints in Postman 1 hour ? Hopefully finish requests and descriptions CRUD API ?
