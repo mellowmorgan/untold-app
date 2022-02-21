@@ -41,4 +41,4 @@ Things you may want to cover:
 #### Sunday, 02/20
 
 * 6:00-7:40: Work on API, test endpoints in Postman. Finish API for descriptions and requests done!
-* 7:45-8:00: Look up youtube video devise and react front end
+* 7:45-8:45: Modify user model look up devise stuff
