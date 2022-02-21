@@ -8,6 +8,10 @@ Rails.application.routes.draw do
         resources :descriptions do
         end  
       end
+      get 'descriptions', to: 'descriptions#index'
+      end
+      get 'descriptions', to: 'descriptions#show'
+      end
     end    
   end
 end

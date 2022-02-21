@@ -1,9 +1,14 @@
 module Api
   module V1
     class DescriptionsController < ApplicationController
+      
       def index
-        descriptions = Description.find_by_request(params[:request_id])
-        json_response(descriptions)
+        if params[:request_id]
+          descriptions = Description.find_by_request(params[:request_id])
+          json_response(descriptions)
+        else 
+          descriptions = Description.all
+          json_response(descriptions)
       end
 
       def show
