@@ -40,5 +40,5 @@ Things you may want to cover:
 
 #### Sunday, 02/20
 
-* 6:00: Work on API, test endpoints in Postman 2 hours ? Hopefully finish requests and descriptions CRUD API ?
-* 7:00-8:00 Find and watch a Devise React tutorial to better understand 1 hour ?
+* 6:00-7:40: Work on API, test endpoints in Postman. Finish API for descriptions and requests done!
+* 7:45-8:00: Look up youtube video devise and react front end
