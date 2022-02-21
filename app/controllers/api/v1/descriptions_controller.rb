@@ -9,6 +9,7 @@ module Api
         else 
           descriptions = Description.all
           json_response(descriptions)
+        end
       end
 
       def show

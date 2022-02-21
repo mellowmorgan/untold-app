@@ -9,9 +9,7 @@ Rails.application.routes.draw do
         end  
       end
       get 'descriptions', to: 'descriptions#index'
-      end
-      get 'descriptions', to: 'descriptions#show'
-      end
+      get 'descriptions/:id', to: 'descriptions#show'
     end    
   end
 end
