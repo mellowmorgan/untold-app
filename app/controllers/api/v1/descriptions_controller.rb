@@ -27,6 +27,7 @@ module Api
     private 
       def description_params 
         params.permit(:content, :status, :user_id,:rating, :request_id)
+      end
     end
   end
 end
