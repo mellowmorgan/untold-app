@@ -16,16 +16,20 @@ module Api
           render status: 200, json: {
           message: "Request added successfully."
           }
+        else
+          render json: { error: "Unable to create new request." }
         end
       end
 
       def update
         @request = Request.find(params[:id])
-        @request.update()
+        @request.update(request_params)
         if @request.save
           render status: 200, json: {
             message: "Request updated successfully."
             }
+        else
+          render json: { error: "There was an error updating the request." }
         end
       end
 
@@ -35,6 +39,8 @@ module Api
           render status: 200, json: {
           message: "Request has been deleted successfully."
           }
+        else
+          { error: "There was an error deleting the request." }
         end
       end
       private
