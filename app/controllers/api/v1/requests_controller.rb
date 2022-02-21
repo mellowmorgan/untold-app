@@ -2,13 +2,13 @@ module Api
   module V1
     class RequestsController < ApplicationController
       def index
-        @requests = Request.all
-        json_response(@requests)
+        requests = Request.all
+        json_response(requests)
       end
 
       def show
-        @request = Request.find(params[:id])
-        json_response(@request)
+        request = Request.find(params[:id])
+        json_response(request)
       end
 
       def create
@@ -22,9 +22,9 @@ module Api
       end
 
       def update
-        @request = Request.find(params[:id])
-        @request.update(request_params)
-        if @request.save
+        request = Request.find(params[:id])
+        request.update(request_params)
+        if request.save
           render status: 200, json: {
             message: "Request updated successfully."
             }
@@ -34,8 +34,8 @@ module Api
       end
 
       def destroy
-        @request = Request.find(params[:id])
-        if @request.destroy
+        request = Request.find(params[:id])
+        if request.destroy
           render status: 200, json: {
           message: "Request has been deleted successfully."
           }

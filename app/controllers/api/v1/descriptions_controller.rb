@@ -2,13 +2,13 @@ module Api
   module V1
     class DescriptionsController < ApplicationController
       def index
-        @descriptions = Description.find_by_request(params[:request_id])
-        json_response(@descriptions)
+        descriptions = Description.find_by_request(params[:request_id])
+        json_response(descriptions)
       end
 
       def show
-        @description = Description.find(params[:id])
-        json_response(@description)
+        description = Description.find(params[:id])
+        json_response(description)
       end
 
       def create
@@ -19,11 +19,25 @@ module Api
         end
       end
 
-  #     def update
-  #     end
+      def update
+        description = Description.find(params[:id])
+        if description.update(description_params)
+          render status: 200, json: {message: "Description updated successfully."}
+        else
+          render json:{error:"There was an error updating the description."}
+        end
+      end
 
-  #     def destroy
-  #     end 
+      def destroy
+        description = Description.find(params[:id])
+        if description.destroy
+          render status: 200, json: {
+          message: "Description has been deleted successfully."
+          }
+        else
+          { error: "There was an error deleting the description." }
+        end
+      end
     private 
       def description_params 
         params.permit(:content, :status, :user_id,:rating, :request_id)
