@@ -77,9 +77,9 @@ Devise.setup do |config|
   # enable it only for database authentication.
   # For API-only applications to support authentication "out-of-the-box", you will likely want to
   # enable this with :database unless you are using a custom strategy.
-  # The supported strategies are:
+  # The supported strategies are: 
   # :database      = Support basic authentication with authentication key + password
-  # config.http_authenticatable = false
+  config.http_authenticatable = true
 
   # If 401 status code should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true

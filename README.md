@@ -48,7 +48,9 @@ Things you may want to cover:
 8:45am-10am: Work on homepage, Devise views.
 10:10am: NOTE TO SELF: from stuff online I've seen, using Devise with React is not advised, might have to scrap react idea as I've already begun implementing Devise, so might stick to just a Rails app!:(
 11:00-12:30: Trying to figure out Devise auth with API use.
-1pm: https://github.com/waiting-for-dev/devise-jwt
+1pm: https://github.com/waiting-for-dev/devise-jwt (NOTE FOR SELF: DONT TRY AND USE THIS AGAIN IT MESSED UP YOUR APP WARNING!!)
 2:15pm: Tried implementing Devise, messed up my project and had to fetch and reset to last git push. 
+2:30pm: Failing yet again with authentication. Why is authentication with devise so tricky? *bangs head* 
+2:45pm Note to self: when using authenticated API in postman, go to Auth section, choose Basic Auth, then enter email, password to access API.
 
 
