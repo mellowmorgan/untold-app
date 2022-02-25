@@ -49,4 +49,6 @@ Things you may want to cover:
 10:10am: NOTE TO SELF: from stuff online I've seen, using Devise with React is not advised, might have to scrap react idea as I've already begun implementing Devise, so might stick to just a Rails app!:(
 11:00-12:30: Trying to figure out Devise auth with API use.
 1pm: https://github.com/waiting-for-dev/devise-jwt
+2:15pm: Tried implementing Devise, messed up my project and had to fetch and reset to last git push. 
+
 
