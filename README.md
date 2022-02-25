@@ -26,7 +26,7 @@ Things you may want to cover:
 ![database schema image](./public/sqldesign.png)
 
 ### Research & Planning Log
-#### Friday, 02/18
+#### Friday, 02/18 8 hours
 * 8:30: Create app with webpacker=react flag
 * 8:45: Capstone proposal 
 * 9:00: Plan database with sqldesigner, add to readme
@@ -38,7 +38,7 @@ Things you may want to cover:
 * 3:30: Watch Youtube video CRUD React 40 minutes https://www.youtube.com/watch?v=oyjzi837wME&t=243s
 
 
-#### Sunday, 02/20
+#### Sunday, 02/20 2.5 hours
 
 * 6:00-7:40: Work on API, test endpoints in Postman. Finish API for descriptions and requests done!
 * 7:45-8:45: Modify user model look up devise stuff
