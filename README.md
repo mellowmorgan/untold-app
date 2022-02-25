@@ -45,3 +45,4 @@ Things you may want to cover:
 
 #### Friday, 02/25 8 hours
 8:45am-10am: Work on homepage, Devise views.
+10:10am: NOTE TO SELF: from stuff online I've seen, using Devise with React is not advised, might have to scrap react idea as I've already begun implementing Devise, so might stick to just a Rails app!:(

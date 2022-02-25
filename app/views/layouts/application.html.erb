@@ -8,21 +8,25 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('squiggle.png') %>
-  </head>
-
-  <body>
-    <nav style="text-align: right">
     
-      <% if user_signed_in? %>
-      <%= link_to "Home", root_path %>
+  </head>
+    
+  <% if user_signed_in? %>
+    <body>
+      <nav style="text-align: right">
+        <%= link_to "Home", root_path %>
         <%= link_to "Edit Account", edit_user_registration_path %> 
-        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>          
-      <% else %>
-        <%= link_to('Login', new_user_session_path)  %>/<%= link_to('Sign Up', new_user_session_path)  %>  
-      <% end %>
-    </nav>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>       
+      </nav>  
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+      <%= yield %>
+    </body> 
+  <% else %>
     <%= yield %>
-  </body>
+  <% end %>
+   
+ 
+    
+  
 </html>
