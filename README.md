@@ -42,3 +42,6 @@ Things you may want to cover:
 
 * 6:00-7:40: Work on API, test endpoints in Postman. Finish API for descriptions and requests done!
 * 7:45-8:45: Modify user model look up devise stuff
+
+#### Friday, 02/25 8 hours
+8:45am-10am: Work on homepage, Devise views.
