@@ -1,0 +1,14 @@
+.signup{    
+    background-color: 'white';
+    padding: '40px';
+    width: '530px';
+    margin-top:'20vh';
+    margin-left: 'auto';
+    margin-right: 'auto';
+}
+.signup h2{
+  margin:'.5rem 0';
+  text-align:'center';
+  font-weight:'bolder';
+  font-family: 'zillaslab,palatino,"Palatino Linotype",serif';font-size:'2.5rem';
+}
