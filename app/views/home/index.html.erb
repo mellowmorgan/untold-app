@@ -1,5 +1,35 @@
 <h1>Welcome</h1>
 
-<div>
-content
+
+
+<div class="row">
+<div class="col-md-4 left-col">
 </div>
+<div class="col-md-4">
+<div>
+<% if @requests_published_10.any? %>
+  <h2>Answered Requests</h2>
+  <% @requests_published_10.each do |request| %>
+    <%= request.content %>
+  <% end %>
+<% end %>
+</div>
+
+<div>
+<% if @requests_approved_10.any? %>
+  <h2>Open Requests</h2>
+  <% @requests_approved_10.each do |request| %>
+    <%= request.content %>
+  <% end %>
+<% end %>
+</div>
+</div>
+<div class="col-md-4" style="background-color:gray">
+</div>
+</div>
+
+
+
+
+
+

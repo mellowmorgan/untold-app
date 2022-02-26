@@ -38,11 +38,17 @@
   padding-bottom: 8px;
   font-size:20px;
 }
-body{
+.background{
   background: url('./../assets/matisse.jpeg'); 
   background-size: cover;
   font-family: sans-serif;
 }
 .submit-signup-button-div{
   text-align:right;
+}
+body{
+  background:rgb(239, 239, 239);
+}
+.col-md-4{
+  min-height:100vh;
 }
