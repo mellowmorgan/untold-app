@@ -21,6 +21,7 @@
   font-weight:bolder;
   font-family: zillaslab,palatino,"Palatino Linotype",serif;font-size: 40px;
 }
+
 .signup h4{
   font-size: 16px;
   text-align: center;
@@ -49,6 +50,19 @@
 body{
   background:rgb(239, 239, 239);
 }
-.col-md-4{
+.col-md-2, col-md-4, col-md-5, col-md-6{
   min-height:100vh;
+}
+.categories{
+  margin:auto;
+  width:fit-content;
+  float:right;
+}
+.category{
+  padding:20px;
+}
+.published-request{
+  margin:20px;
+  min-height:150px;
+  background:white;
 }
