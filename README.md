@@ -43,7 +43,7 @@ Things you may want to cover:
 * 6:00-7:40: Work on API, test endpoints in Postman. Finish API for descriptions and requests done!
 * 7:45-8:45: Modify user model look up devise stuff
 
-#### Friday, 02/25 8 hours
+#### Friday, 02/25 ~6 hours
 
 8:45am-10am: Work on homepage, Devise views.
 10:10am: NOTE TO SELF: from stuff online I've seen, using Devise with React is not advised, might have to scrap react idea as I've already begun implementing Devise, so might stick to just a Rails app!:(
@@ -53,4 +53,13 @@ Things you may want to cover:
 2:30pm: Failing yet again with authentication. Why is authentication with devise so tricky? *bangs head* 
 2:45pm Note to self: when using authenticated API in postman, go to Auth section, choose Basic Auth, then enter email, password to access API. https://github.com/heartcombo/devise/wiki/How-To:-Use-HTTP-Basic-Authentication
 
+Saturday 1 hour: migration categories array add; "open requests" button left pane, published requests section with answer in middle section start building out
+#### Sunday ~2 hours uncommited this below
+2:00pm: building out homepage
+
+Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
+use this:
+https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni
+read this:
+https://www.boia.org/blog/5-quick-ways-to-self-check-the-accessibility-of-a-website
 
