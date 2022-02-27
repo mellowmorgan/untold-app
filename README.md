@@ -53,15 +53,17 @@ Things you may want to cover:
 2:30pm: Failing yet again with authentication. Why is authentication with devise so tricky? *bangs head* 
 2:45pm Note to self: when using authenticated API in postman, go to Auth section, choose Basic Auth, then enter email, password to access API. https://github.com/heartcombo/devise/wiki/How-To:-Use-HTTP-Basic-Authentication
 
-Saturday 2.5 hours: migration categories array add; "open requests" button left pane, published requests section with answer in middle section start building out
-10:30-1:00
+#### Saturday 2.5 hours
+10:30 to 1am: Migration categories array add; "open requests" button left pane, published requests section with answer in middle section start building out
 
-#### Sunday ~2 hours uncommited this below
-2:00pm: building out homepage
+
+#### Sunday 1 hour
+12:00pm: building out homepage
 
 Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
 use this:
 https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni
 read this:
 https://www.boia.org/blog/5-quick-ways-to-self-check-the-accessibility-of-a-website
-
+Sticky navbar:
+https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
