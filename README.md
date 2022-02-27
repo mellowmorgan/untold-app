@@ -53,8 +53,8 @@ Things you may want to cover:
 2:30pm: Failing yet again with authentication. Why is authentication with devise so tricky? *bangs head* 
 2:45pm Note to self: when using authenticated API in postman, go to Auth section, choose Basic Auth, then enter email, password to access API. https://github.com/heartcombo/devise/wiki/How-To:-Use-HTTP-Basic-Authentication
 
-Saturday 1 hour: migration categories array add; "open requests" button left pane, published requests section with answer in middle section start building out
-10:30-11:30
+Saturday 2.5 hours: migration categories array add; "open requests" button left pane, published requests section with answer in middle section start building out
+10:30-1:00
 
 #### Sunday ~2 hours uncommited this below
 2:00pm: building out homepage

@@ -35,7 +35,10 @@
   <h3><span style="margin-left:20px;">Open Requests</span></h3>
   <div class="have-a-request"><a href="#">add a request</a></div>
   <% @requests_approved.each do |request| %>
-    <div class="open-request"><%= request.content %></div>
+    <div class="open-request"><%= request.content %> 
+    <div><button>Answer</button></div>
+    <div>thumbs up | 25 | report</div></div>
+    
   <% end %>
 <% end %>
 </div>
