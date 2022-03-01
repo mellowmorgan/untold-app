@@ -5,15 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+ 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('squiggle.png') %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'index' %>
   </head>
     
   <% if user_signed_in? %>
     <body>
       <nav class="my-nav-bar" style="text-align: right">
+        <div class="nav-title"><h2>untold</h2></div>
         <%= link_to "Home", root_path %>
         <%= link_to "Edit Account", edit_user_registration_path %> 
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>       

@@ -62,7 +62,11 @@ Things you may want to cover:
 
 #### Monday 1.5 hour
 9:00pm try to use react api call?
-SVG heart and flag?
+10pm Read this tutorial https://github.com/DakotaLMartinez/rails-react-devise-tutorial
+11:pm found this https://www.youtube.com/watch?v=gLWIYk0Sd38 WATCH TOMORROW, do modal with new request form popup
+
+### Tuesday 
+5:30 https://www.youtube.com/watch?v=gLWIYk0Sd38 WATCH TOMORROW, do modal with new request do div with it in home 
 
 Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
 use this:

@@ -14,7 +14,18 @@
 </div>
 <div class="col-md-6">
 <div>
-
+<div class="add-request">
+  <%= form_with(url: "/api/v1/requests", method: :post) do |f| %>
+    <div class="firm form-group">
+    <%= f.label "Request:" %><br />
+    <%= f.text_area :content, :class => 'form-control',  autofocus: true, placeholder:"What does fire look like?" %>
+    </div>
+    <%= hidden_field :user_id, :value=>current_user.id  %>
+    <div>
+    <%= f.submit "Post", :class => "btn btn-light" %>
+  </div>
+  <% end %>
+</div>
 <% if @requests_published.any? %>
   <h3><span style="margin-left:20px;">Answered Requests</span></h3>
   <% @requests_published.each do |request| %>

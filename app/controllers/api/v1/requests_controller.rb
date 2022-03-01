@@ -19,6 +19,7 @@ module Api
           render json: { error: "error getting published requests." }
         end
       end
+      
 
       def create
         if Request.create!(request_params)
