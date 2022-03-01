@@ -60,6 +60,10 @@ Things you may want to cover:
 #### Sunday 1 hour
 12:00pm: building out homepage
 
+#### Monday 1.5 hour
+9:00pm try to use react api call?
+SVG heart and flag?
+
 Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
 use this:
 https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni

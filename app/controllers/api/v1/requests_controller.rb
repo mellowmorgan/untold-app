@@ -10,6 +10,15 @@ module Api
         request = Request.find(params[:id])
         json_response(request)
       end
+      
+      def published
+        requests_published = Request.most_recently_added_published
+        if requests_published
+          json_response(requests_published)
+        else
+          render json: { error: "error getting published requests." }
+        end
+      end
 
       def create
         if Request.create!(request_params)
