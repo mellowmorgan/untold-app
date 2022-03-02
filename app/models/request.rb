@@ -6,7 +6,7 @@ class Request < ApplicationRecord
   has_many :descriptions
   scope :most_recently_added_published, -> { where(status:"published").order(created_at: :desc)}
   scope :most_recently_added_approved, -> { where(status:"approved").order(created_at: :desc)}
-  def downcase_categories{
-    self.categories.map{|word| word.downcase }
-  }
+  def downcase_categories
+    self.categories = self.categories.map{|word| word.downcase }
+  end
 end

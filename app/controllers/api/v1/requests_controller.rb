@@ -30,7 +30,7 @@ module Api
         end 
         
         # binding.pry
-        if Request.create!(user_id:request_params["user_id"],content: request_params["content"],categories: array_categories)
+        if Request.create!(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],categories: array_categories)
           render status: 200, json: {
           message: "Request added successfully."
           }
