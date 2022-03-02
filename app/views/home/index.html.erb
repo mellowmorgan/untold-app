@@ -15,12 +15,17 @@
 <div class="col-md-6">
 <div>
 <div class="add-request">
-  <%= form_with(url: "/api/v1/requests", method: :post) do |f| %>
+  <%= form_with(url: "/api/v1/requests", method: :post, model: @request) do |f| %>
     <div class="firm form-group">
     <%= f.label "Request:" %><br />
-    <%= f.text_area :content, :class => 'form-control',  autofocus: true, placeholder:"What does fire look like?" %>
+    <%= f.text_area :content, :class => 'form-control',  autofocus: true, 
+    placeholder:"What does fire look like?" %><br />
+    <%= f.label "Tags (optional):" %><br />
+    <%= f.text_field :categories, :class => 'form-control',  autofocus: true, placeholder:"Example: miscellaneous, nature" %><br />
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :status, :value => "approved" %>
     </div>
-    <%= hidden_field :user_id, :value=>current_user.id  %>
+    
     <div>
     <%= f.submit "Post", :class => "btn btn-light" %>
   </div>

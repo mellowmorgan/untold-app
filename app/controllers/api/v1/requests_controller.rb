@@ -1,3 +1,4 @@
+require('pry')
 module Api
   module V1
     class RequestsController < ApplicationController
@@ -22,7 +23,14 @@ module Api
       
 
       def create
-        if Request.create!(request_params)
+        
+        if request_params["categories"]
+          str_categories = request_params["categories"]
+          array_categories = str_categories.gsub(/\s+/, "").split(",")
+        end 
+        
+        # binding.pry
+        if Request.create!(user_id:request_params["user_id"],content: request_params["content"],categories: array_categories)
           render status: 200, json: {
           message: "Request added successfully."
           }
@@ -55,7 +63,7 @@ module Api
       end
       private
       def request_params
-        params.permit(:user_id, :content, :status)
+        params.require(:request).permit(:user_id, :content,:status,:categories)
       end
     end
   end
