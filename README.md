@@ -66,9 +66,10 @@ Things you may want to cover:
 11:pm found this https://www.youtube.com/watch?v=gLWIYk0Sd38 WATCH TOMORROW, do modal with new request form popup
 
 ### Tuesday 
-5:00 Try modifying create with current user being user id? in controller
-5:30 https://www.youtube.com/watch?v=gLWIYk0Sd38 WATCH TOMORROW, do modal with new request do div with it in home 
+5:00-6:30pm Try modifying create with current user being user id? in controller; do data dump
+8pm
 
+https://www.youtube.com/watch?v=gLWIYk0Sd38
 Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
 use this:
 https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni
