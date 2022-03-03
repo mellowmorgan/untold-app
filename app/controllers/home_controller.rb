@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     @requests_published = helper_values(result.values)
     # binding.pry
     respond_to do |format|
-      format.js 
+      format.js {render layout: false}
     end
   end
 

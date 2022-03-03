@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   end
   # get "/fetch_posts" => 'home#from_category', as: 'fetch_posts'
   get "/fetch_posts", to: 'home#from_category'
+  get 'ajax/:action', to: 'ajax#:action', :defaults => { :format => 'js' }
 end
