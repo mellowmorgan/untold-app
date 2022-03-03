@@ -1,19 +1,9 @@
 <div class="my-container">
 <div class="row home-row">
 <div class="col-md-2 left-col">
-<div class="categories">
-<h3><span style="margin-left:20px;">Categories</span></h3>
-<div class="category">Popular</div>
-<div class="category">Nature</div>
-<div class="category">Landmarks</div>
-<div class="category">Animals</div>
-<div class="category">Objects</div>
-<div class="category">Buildings</div>
-<div class="category">Miscellaneous</div>
-</div>
+<%= render 'sidebar_menu' %>
 </div>
 <div class="col-md-6">
-<div>
 <div class="add-request">
   <%= form_with(url: "/api/v1/requests", method: :post, model: @request) do |f| %>
     <div class="firm form-group">
@@ -31,16 +21,10 @@
   </div>
   <% end %>
 </div>
-<% if @requests_published.any? %>
-  <h3><span style="margin-left:20px;">Answered Requests</span></h3>
-  <% @requests_published.each do |request| %>
-    <div class="published-request"><%= request.content %>
-    <% request.descriptions.each do |desc|%>
-      <div class="answer-home"><%= desc.content %></div>
-    <% end %>
-    </div>
-  <% end %>
-<% end %>
+
+<div id="published-requests-section">
+<%= render partial: 'published_posts', locals: { requests_published: @requests_published} %>
+
 </div>
 
 

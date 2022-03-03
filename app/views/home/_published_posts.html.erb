@@ -1,0 +1,10 @@
+<% if requests_published.any? %>
+  <h3><span style="margin-left:20px;">Answered Requests</span></h3>
+  <% requests_published.each do |request| %>
+    <div class="published-request"><%= request.content %>
+    <% request.descriptions.each do |desc|%>
+      <div class="answer-home"><%= desc.content %></div>
+    <% end %>
+    </div>
+  <% end %>
+<% end %>

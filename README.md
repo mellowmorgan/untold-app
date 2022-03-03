@@ -65,11 +65,19 @@ Things you may want to cover:
 10pm Read this tutorial https://github.com/DakotaLMartinez/rails-react-devise-tutorial
 11:pm found this https://www.youtube.com/watch?v=gLWIYk0Sd38 WATCH TOMORROW, do modal with new request form popup
 
-### Tuesday 
-5:00-6:30pm Try modifying create with current user being user id? in controller; do data dump
-8pm
+### Tuesday put 2 hours in
+5:00-6:45pm Try modifying create with current user being user id? in controller; do data dump
+11:30 work on improving add request form, category click handlers javascript/coffeescript? https://coderwall.com/p/kqb3xq/rails-4-how-to-partials-ajax-dead-easy no luck but found this tutorial
 
-https://www.youtube.com/watch?v=gLWIYk0Sd38
+Wednesday 1 hour
+5pm work 1 hour on improving add request form, category click handlers javascript/coffeescript? https://coderwall.com/p/kqb3xq/rails-4-how-to-partials-ajax-dead-easy
+
+Thursday 2 hours
+answer request pop-up? modal video https://www.youtube.com/watch?v=gLWIYk0Sd38
+Friday
+modal answer request, links to view all; paginate? categories filter on side again, modify homepage limit to 10 newest, styling, forgot password edit account styling? 8 hours
+Weekend get base website done, likes and flag buttons, pop ups for it, add username to published and approved, styling put 4 hours in?
+
 Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
 use this:
 https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni

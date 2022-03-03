@@ -20,7 +20,7 @@ class Request < ApplicationRecord
       end
     end
 
-    if categories.any? && !valid_checker
+    if self.categories.any? && !valid_checker
       errors.add(:categories, "You've entered an invalid category. Please include one or more of the following categories: people, popular, nature, miscellaneous, objects, landmarks, buildings, animals")
     end
   end

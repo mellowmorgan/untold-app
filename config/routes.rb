@@ -14,5 +14,5 @@ Rails.application.routes.draw do
       get 'descriptions/:id', to: 'descriptions#show'
     end    
   end
-
+  get "/fetch_posts" => 'home#from_category', as: 'fetch_posts'
 end
