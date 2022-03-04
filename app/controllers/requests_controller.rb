@@ -1,10 +1,12 @@
+require('pry')
 class RequestsController < ApplicationController
   include Devise::Controllers
   def from_open_category
     clicked_category=params[:category]
     query = "select * from requests where '#{clicked_category}'=ANY(categories) AND status='approved';"
     result = ActiveRecord::Base.connection.execute(query)
-    @requests_published = helper_values(result.values)
+    @requests_approved = helper_values(result.values)
+    # binding.pry
     respond_to do |format|
       format.js {render layout: false}
     end

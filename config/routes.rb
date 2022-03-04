@@ -14,7 +14,6 @@ Rails.application.routes.draw do
       get 'descriptions/:id', to: 'descriptions#show'
     end    
   end
-  # get "/fetch_posts" => 'home#from_category', as: 'fetch_posts'
   get "/fetch_posts", to: 'home#from_category'
   get "/fetch_answered_posts", to: 'requests#from_answered_category'
   get "/fetch_open_posts", to: 'requests#from_open_category'
