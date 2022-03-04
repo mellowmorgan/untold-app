@@ -1,0 +1,9 @@
+<% if requests_approved.any? %>
+  <h3><span style="margin-left:20px;">Open Requests</span></h3>
+  <% requests_approved.each do |request| %>
+    <div class="open-request"><%= request.content %> 
+    <div><button>Answer</button></div>
+    <div>thumbs up | 25 | report</div></div>
+    
+  <% end %>
+<% end %>
