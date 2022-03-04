@@ -1,12 +1,12 @@
 <div class="categories">
 <h3><span style="margin-left:20px;">Categories</span></h3>
 <div class="category"><%= link_to "Popular", fetch_posts_path(:category => "popular"), :remote => true,data: {type: "script"} %></div>
-<div class="category">Nature</div>
+<div class="category"><%= link_to "Nature", fetch_posts_path(:category => "nature"), :remote => true,data: {type: "script"} %></div>
 
-<div class="category">Landmarks</div>
+<div class="category"><%= link_to "Landmarks", fetch_posts_path(:category => "landmarks"), :remote => true,data: {type: "script"} %></div>
 <div class="category"><%= link_to "People", fetch_posts_path(:category => "people"), :remote => true,data: {type: "script"} %></div>
-<div class="category">Animals</div>
-<div class="category">Objects</div>
-<div class="category">Buildings</div>
-<div class="category">Miscellaneous</div>
+<div class="category"><%= link_to "Animals", fetch_posts_path(:category => "animals"), :remote => true,data: {type: "script"} %></div>
+<div class="category"><%= link_to "Objects", fetch_posts_path(:category => "objects"), :remote => true,data: {type: "script"} %></div>
+<div class="category"><%= link_to "Buildings", fetch_posts_path(:category => "buildings"), :remote => true,data: {type: "script"} %></div>
+<div class="category"><%= link_to "Miscellaneous", fetch_posts_path(:category => "miscellaneous"), :remote => true,data: {type: "script"} %></div>
 </div>
