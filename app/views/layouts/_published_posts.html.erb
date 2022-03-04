@@ -1,7 +1,7 @@
 <% if requests_published.any? %>
   <h3><span style="margin-left:20px;">Answered Requests</span></h3>
   <% requests_published.each do |request| %>
-    <div class="published-request"><%= request.content %>
+    <div data-toggle="tooltip" title="Click to go to request page." class="tooltip-right request-tooltip published-request" data-placement="right"><%= request.content %>
     <div class="answer-home"><%= request.descriptions.order("rating DESC").first.content %></div>
 
     </div>
@@ -10,3 +10,10 @@
   <% else %>
   <p>No requests found.</p>
 <% end %>
+
+<script>
+  
+  $(document).on('turbolinks:load', function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

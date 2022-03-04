@@ -1,6 +1,6 @@
 <div class="my-container">
 <div class="row home-row">
-<div class="col-md-2 left-col">
+<div class="col-md-3 left-col">
 <div class="categories">
 <h3><span style="margin-left:20px;">Categories</span></h3>
 <div class="category"><%= link_to "Popular", fetch_open_posts_path(:category => "popular"), :remote => true,data: {type: "script"} %></div>
@@ -15,16 +15,18 @@
 </div>
 
 </div>
-<div class="col-md-10">
-<div style="width:80%">
+<div class="col-md-9">
+<div class="open-requests-section">
+<h3>Add a Request</h3>
 <div class="add-request">
+<div class="add-request-form">
   <%= form_with(url: "/requests/add_request", method: :post, model: @request) do |f| %>
     <div class="form-group">
     <%= f.label "Request:" %><br />
-    <%= f.text_area :content, :class => 'form-control',  autocomplete: true, autofocus: true, 
+    <%= f.text_area :content, :class => 'form-control',  autocomplete: true, 
     placeholder:"What does fire look like?" %><br />
     <%= f.label "Tags (optional):" %><br />
-    <%= f.text_field :categories, :class => 'form-control',  autofocus: true, autocomplete: true, placeholder:"Example: miscellaneous, nature" %><br />
+    <%= f.text_field :categories, :class => 'form-control', autocomplete: true, placeholder:"Example: miscellaneous, nature" %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.hidden_field :status, :value => "approved" %>
     </div>
@@ -33,6 +35,7 @@
   </div>
   <% end %>
 
+</div>
 </div>
 <div id="open-requests-section">
 
