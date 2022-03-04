@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   include Devise::Controllers
   def from_category 
     clicked_category=params[:category]
-    query = "select * from requests where '#{clicked_category}'=ANY(categories) AND status='published';"
+    query = "select * from requests where '#{clicked_category}'=ANY(categories) AND status='published' LIMIT 10;"
     result = ActiveRecord::Base.connection.execute(query)
     @requests_published = helper_values(result.values)
     # binding.pry

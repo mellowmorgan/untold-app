@@ -16,14 +16,16 @@
 </div>
 <div class="col-md-10">
 <div style="width:80%">
+<%= flash[:alert] %>
+      <%= flash[:notice] %>
 <div class="add-request">
-  <%= form_with(url: "/api/v1/requests", method: :post, model: @request) do |f| %>
+  <%= form_with(url: "/requests/add_request", method: :post, model: @request) do |f| %>
     <div class="form-group">
     <%= f.label "Request:" %><br />
-    <%= f.text_area :content, :class => 'form-control',  autofocus: true, 
+    <%= f.text_area :content, :class => 'form-control',  autocomplete: true, autofocus: true, 
     placeholder:"What does fire look like?" %><br />
     <%= f.label "Tags (optional):" %><br />
-    <%= f.text_field :categories, :class => 'form-control',  autofocus: true, placeholder:"Example: miscellaneous, nature" %><br />
+    <%= f.text_field :categories, :class => 'form-control',  autofocus: true, autocomplete: true, placeholder:"Example: miscellaneous, nature" %><br />
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.hidden_field :status, :value => "approved" %>
     </div>

@@ -69,14 +69,23 @@ Things you may want to cover:
 5:00-6:45pm Try modifying create with current user being user id? in controller; do data dump
 11:30 work on improving add request form, category click handlers javascript/coffeescript? https://coderwall.com/p/kqb3xq/rails-4-how-to-partials-ajax-dead-easy no luck but found this tutorial
 
-Wednesday 1 hour
-5pm work 1 hour on improving add request form, category click handlers javascript/coffeescript? https://coderwall.com/p/kqb3xq/rails-4-how-to-partials-ajax-dead-easy
+Wednesday 
+5pm work 2 hours on add category click handlers side menu js
 
-Thursday 2 hours
-answer request pop-up? modal video https://www.youtube.com/watch?v=gLWIYk0Sd38
+Thursday 1 hour add js partials side menu categories for open and answered request pages
+
 Friday
-modal answer request, links to view all; paginate? categories filter on side again, modify homepage limit to 10 newest, styling, forgot password edit account styling? 8 hours
-Weekend get base website done, likes and flag buttons, pop ups for it, add username to published and approved, styling put 4 hours in?
+1. change home vs requests to limit 10 newest for home, all for others and add will_paginate
+2. nav and home styling, forgot password edit account styling? 
+3. make home only show highest rating description
+4. click on request show request and add description option new page completely
+5. add more entries to database, backup pg_dump
+
+Weekend: Submit photo url add photo from computer, implement active storage photos, santitize url if url
+
+pop-up? modal video https://www.youtube.com/watch?v=gLWIYk0Sd38
+modal for reporting an answer or description 
+Weekend get likes and flag buttons, pop ups for latter, add username to published and approved and scriptions, styling put 4 hours in?
 
 Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
 use this:
