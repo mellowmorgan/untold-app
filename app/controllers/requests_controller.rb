@@ -31,7 +31,11 @@ class RequestsController < ApplicationController
       flash[:notice] = "Your request has been added."
       redirect_to '/requests/open'
     else
-      flash[:alert] = "There was an error adding your request."
+      errors = ""
+      if request.errors.any?
+        errors = request.errors.full_messages.join(", ")
+      end
+      flash[:alert] = "There was an error adding your request. #{errors}."
       redirect_to '/requests/open'
     end
   end
