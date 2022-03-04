@@ -1,12 +1,13 @@
 <div class="my-container">
 <div class="row home-row">
 <div class="col-md-2 left-col">
-<%= render 'sidebar_menu' %>
+<%= render 'layouts/sidebar_menu' %>
 </div>
 <div class="col-md-10">
+<div style="width:80%">
 <div class="add-request">
   <%= form_with(url: "/api/v1/requests", method: :post, model: @request) do |f| %>
-    <div class="firm form-group">
+    <div class="form-group">
     <%= f.label "Request:" %><br />
     <%= f.text_area :content, :class => 'form-control',  autofocus: true, 
     placeholder:"What does fire look like?" %><br />
@@ -15,7 +16,6 @@
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.hidden_field :status, :value => "approved" %>
     </div>
-    
     <div>
     <%= f.submit "Post", :class => "btn btn-light" %>
   </div>
@@ -25,7 +25,6 @@
 <div>
 <% if @requests_approved.any? %>
   <h3><span style="margin-left:20px;">Open Requests</span></h3>
-  <div class="have-a-request"><a href="#">add a request</a></div>
   <% @requests_approved.each do |request| %>
     <div class="open-request"><%= request.content %> 
     <div><button>Answer</button></div>
@@ -35,10 +34,9 @@
 <% end %>
 </div>
 
+</div>
 
 </div>
-<div class="col-md-2">
 
-</div>
 </div>
 </div>

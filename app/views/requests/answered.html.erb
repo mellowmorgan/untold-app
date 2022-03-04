@@ -1,0 +1,15 @@
+<div class="my-container">
+<div class="row home-row">
+<div class="col-md-2 left-col">
+<%= render 'layouts/sidebar_menu' %>
+</div>
+<div class="col-md-10">
+
+<div id="published-requests-section" style="width:80%">
+<%= render partial: 'layouts/published_posts', locals: { requests_published: @requests_published} %>
+
+</div>
+</div>
+
+</div>
+</div>

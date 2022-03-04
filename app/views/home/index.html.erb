@@ -1,7 +1,7 @@
 <div class="my-container">
 <div class="row home-row">
 <div class="col-md-2 left-col">
-<%= render 'sidebar_menu' %>
+<%= render 'layouts/sidebar_menu' %>
 </div>
 <div class="col-md-6">
 <div class="add-request">
@@ -23,7 +23,7 @@
 </div>
 
 <div id="published-requests-section">
-<%= render partial: 'published_posts', locals: { requests_published: @requests_published} %>
+<%= render partial: 'layouts/published_posts', locals: { requests_published: @requests_published} %>
 
 </div>
 
