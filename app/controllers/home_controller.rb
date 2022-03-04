@@ -18,7 +18,11 @@ class HomeController < ApplicationController
     @requests_approved = Request.most_recently_added_approved
     render :index
   end
+  def help
+    render :contact
+  end
 
+  #NEED TO UPDATE SO IT'S STILL NEWEST FIRST ORDER BY CREATED DESC
   def helper_values(requests)
     new_array = []
     requests.each do |entry|

@@ -77,7 +77,7 @@ Thursday 1 hour add js partials side menu categories for open and answered reque
 Friday
 1. change home vs requests to limit 10 newest for home, all for others and add will_paginate
 2. nav and home styling, forgot password edit account styling? 
-3. make home only show highest rating description
+DONE3. make home only show highest rating description
 4. click on request show request and add description option new page completely
 5. add more entries to database, backup pg_dump
 

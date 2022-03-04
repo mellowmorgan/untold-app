@@ -14,10 +14,12 @@ Rails.application.routes.draw do
       get 'descriptions/:id', to: 'descriptions#show'
     end    
   end
+  get "/help", to: 'home#help'
   get "/fetch_posts", to: 'home#from_category'
   get "/fetch_answered_posts", to: 'requests#from_answered_category'
   get "/fetch_open_posts", to: 'requests#from_open_category'
   get "/requests/open", to: 'requests#open'
+  get "/requests/:id", to: 'requests#show'
   get "/requests/answered", to: 'requests#answered'
   post "requests/add_request", to: 'requests#add_request'
   get 'ajax/:action', to: 'ajax#:action', :defaults => { :format => 'js' }

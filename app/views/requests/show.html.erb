@@ -1,0 +1,12 @@
+<div class="my-container">
+<div style="width:80%">
+<div class="published-request">
+<%= @request.content %>
+<% if @request.status=="published" && @request.descriptions.any? %>
+  <% @request.descriptions.each do |desc| %>
+    <div class="answer-home"><%= desc.content %></div>
+  <% end %>
+<% end %>
+</div>
+</div>
+</div>

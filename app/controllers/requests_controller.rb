@@ -47,6 +47,11 @@ class RequestsController < ApplicationController
     @requests_published = Request.most_recently_added_all_published.paginate(page: params[:page], per_page: 10)
     render :answered
   end
+  def show
+    @request = Request.find(params[:id])
+    render :show
+  end
+  
   def helper_values(requests)
     new_array = []
     requests.each do |entry|

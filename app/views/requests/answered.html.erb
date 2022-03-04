@@ -17,6 +17,7 @@
 
 <div id="answered-requests-section" style="width:80%">
 <%= render partial: 'answered_posts', locals: { requests_published: @requests_published} %>
+<%= will_paginate @requests_published %>
 </div>
 </div>
 
