@@ -1,7 +1,18 @@
 <div class="my-container">
 <div class="row home-row">
 <div class="col-md-2 left-col">
-<%= render 'layouts/sidebar_menu' %>
+<div class="categories">
+<h3><span style="margin-left:20px;">Categories</span></h3>
+<div class="category"><%= link_to "Popular", fetch_posts_path(:category => "popular"), :remote => true,data: {type: "script"} %></div>
+<div class="category">Nature</div>
+
+<div class="category">Landmarks</div>
+<div class="category"><%= link_to "People", fetch_posts_path(:category => "people"), :remote => true,data: {type: "script"} %></div>
+<div class="category">Animals</div>
+<div class="category">Objects</div>
+<div class="category">Buildings</div>
+<div class="category">Miscellaneous</div>
+</div>
 </div>
 <div class="col-md-10">
 <div style="width:80%">
