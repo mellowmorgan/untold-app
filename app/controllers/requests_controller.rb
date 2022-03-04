@@ -29,10 +29,10 @@ class RequestsController < ApplicationController
     if request.save
       @requests_approved = Request.most_recently_added_all_approved.paginate(page: params[:page], per_page: 10)
       flash[:notice] = "Your request has been added."
-      redirect_to '/requests/open/'
+      redirect_to '/requests/open'
     else
-      flash[alert] = `There was an error adding your request: #{request.errors}`
-      redirect_to '/requests/open/'
+      flash[:alert] = "There was an error adding your request."
+      redirect_to '/requests/open'
     end
   end
   def open

@@ -16,8 +16,6 @@
 </div>
 <div class="col-md-10">
 <div style="width:80%">
-<%= flash[:alert] %>
-      <%= flash[:notice] %>
 <div class="add-request">
   <%= form_with(url: "/requests/add_request", method: :post, model: @request) do |f| %>
     <div class="form-group">
