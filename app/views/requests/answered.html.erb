@@ -1,6 +1,6 @@
 <div class="my-container">
 <div class="row home-row">
-<div class="col-md-2 left-col">
+<div class="col-md-3 left-col">
 <div class="categories">
 <h3><span style="margin-left:20px;">Categories</span></h3>
 <div class="category"><%= link_to "Popular", fetch_answered_posts_path(:category => "popular"), :remote => true,data: {type: "script"} %></div>
@@ -14,9 +14,9 @@
 <div class="category"><%= link_to "Miscellaneous", fetch_answered_posts_path(:category => "miscellaneous"), :remote => true,data: {type: "script"} %></div>
 </div>
 </div>
-<div class="col-md-10">
+<div class="col-md-9">
 
-<div id="answered-requests-section" style="width:80%">
+<div class="answered-requests-section">
 <%= render partial: 'answered_posts', locals: { requests_published: @requests_published} %>
 <%= will_paginate @requests_published %>
 </div>

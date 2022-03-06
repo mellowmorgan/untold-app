@@ -75,9 +75,9 @@ Wednesday
 Thursday 1 hour add js partials side menu categories for open and answered request pages
 
 Friday
-1. change home vs requests to limit 10 newest for home, all for others and add will_paginate
+DONE! 1. change home vs requests to limit 10 newest for home, all for others and add will_paginate
 2. nav and home styling, forgot password edit account styling? 
-DONE3. make home only show highest rating description
+DONE! 3. make home only show highest rating description
 4. click on request show request and add description option new page completely
 5. add more entries to database, backup pg_dump
 
@@ -94,3 +94,12 @@ read this:
 https://www.boia.org/blog/5-quick-ways-to-self-check-the-accessibility-of-a-website
 Sticky navbar:
 https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+
+<%= inline_svg_tag 'heart-svg.svg', class:"heart-like-svg" %>
+<script>
+  $(".heart-like-svg").on("click", ()=>{
+    console.log("blah")
+    $(".heart-like-svg").addClass("heart-like-red");
+    
+  });
+</script>

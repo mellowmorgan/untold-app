@@ -4,8 +4,9 @@
 <%= render 'layouts/sidebar_menu' %>
 </div>
 <div class="col-md-6">
-<h3>Add a Request</h3>
+
 <div class="add-request">
+<div class="add-request-title-box">Add a Request</div>
 
 <div class="add-request-form">
   <%= form_with(url: "/api/v1/requests", method: :post, model: @request) do |f| %>
@@ -25,25 +26,27 @@
   <% end %>
 </div>
 </div>
-<div id="published-requests-section">
+
   
 <%= render partial: 'layouts/published_posts', locals: { requests_published: @requests_published} %>
+<%= link_to "View all answered requests", requests_answered_path %>
 
-</div>
 
 
 </div>
 <div class="col-md-4">
-<div>
+<div class="open-requests-section-home">
+<div class="open-request-title-box">Add a Request</div>
+<div class="open-request-list">
 <% if @requests_approved.any? %>
-  <h3><span style="margin-left:20px;">Open Requests</span></h3>
   <% @requests_approved.each do |request| %>
-    <div class="open-request"><%= request.content %> 
-    <div><button>Answer</button></div>
+    <div class="open-request"><h4><%= request.content %></h4> 
+    <div><button class="btn btn-light">Answer</button></div>
     <div>thumbs up | 25 | report</div></div>
     
   <% end %>
 <% end %>
+<%= link_to "View all open requests", requests_open_path %>
 </div>
 </div>
 </div>

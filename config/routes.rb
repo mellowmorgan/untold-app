@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get "/requests/open", to: 'requests#open'
   get "/requests/answered", to: 'requests#answered'
   post "requests/add_request", to: 'requests#add_request'
-  get "/requests/:id", to: 'requests#show'
+  post "requests/:id/answer", to: 'requests#answer', as: 'answer_request'
+  get "/requests/:id", to: 'requests#show',  as: 'request'
   get 'ajax/:action', to: 'ajax#:action', :defaults => { :format => 'js' }
 end
