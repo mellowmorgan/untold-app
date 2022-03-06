@@ -6,7 +6,7 @@
         <div class="published-request">
           <h3><%= request.content %></h3>
             <div class="answer-home">
-              <%= request.descriptions.order("rating DESC").first.content %>
+              <%= request.descriptions.order(created_at: :desc).first.content %>
             </div>
             
           </div>

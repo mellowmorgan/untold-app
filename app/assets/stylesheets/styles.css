@@ -7,6 +7,36 @@
 .open-request h4{
   font-size:20px;
 }
+.help-form{
+  padding:15px;
+}
+.help-form p{
+  font-size:18px;
+}
+label{
+  font-size:17px;
+}
+.help-holder{
+  padding:45px;
+  min-height:150px;
+  background:white;
+  border: solid 1px #dee0e1;
+  font-family:sans-serif;
+}
+.help-holder h3{
+  margin-top:0;
+}
+.edit-account-holder{
+  padding:20px;
+  margin:20px;
+  min-height:150px;
+  background:white;
+  border: solid 1px #dee0e1;
+  font-family:sans-serif;
+  font-size:24px;
+  font-weight: 700;
+
+}
 .signup{    
     background-color: white;
     padding: 40px;

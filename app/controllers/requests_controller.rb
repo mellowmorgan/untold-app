@@ -22,8 +22,8 @@ class RequestsController < ApplicationController
   end
 
   def add_description
-    desc = Description.new(description_params)
-    if desc.save()
+    # binding.pry
+    if Description.create!(description_params)
       flash[:notice] = "Your description has been added."
       redirect_back(fallback_location: root_path)
     else
