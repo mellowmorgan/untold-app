@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     end    
   end
   get "/help", to: 'home#help'
+  post "/help_send", to: 'home#help_send', as: 'help_send'
   get "/fetch_posts", to: 'home#from_category'
   get "/fetch_answered_posts", to: 'requests#from_answered_category'
   get "/fetch_open_posts", to: 'requests#from_open_category'

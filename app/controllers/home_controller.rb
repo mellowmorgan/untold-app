@@ -11,7 +11,7 @@ class HomeController < ApplicationController
       format.js {render layout: false}
     end
   end
-
+  
   def index
     @request = Request.new
     @requests_published = Request.most_recently_added_published
@@ -21,7 +21,12 @@ class HomeController < ApplicationController
   def help
     render :contact
   end
-
+  def help_send
+    # binding.pry
+    ContactMailer.send_email.deliver_now
+    flash[:notice] = "Your message has been sent. Thank you."
+    render :contact
+  end
   #NEED TO UPDATE SO IT'S STILL NEWEST FIRST ORDER BY CREATED DESC
   def helper_values(requests)
     new_array = []

@@ -4,7 +4,7 @@
   
   <div class="help-form">
   <p>Please submit any suggestions for our site, questions, or issues you may be having below.</p><br />
-  <%= form_with(url: help_path, method: :post) do |f| %>
+  <%= form_with(url: help_send_path, method: :post) do |f| %>
     <div class="form-group">
     <%= f.label "Subject:" %><br />
     <%= f.text_field :subject, :class => 'form-control', 
@@ -12,10 +12,11 @@
     </div>
     <div class="form-group">
     <%= f.label "Message:" %><br />
-    <%= f.text_area :subject, :class => 'form-control', 
+    <%= f.text_area :message, :class => 'form-control', 
     placeholder:"Explain your issue here." %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
     </div>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    
     
     <div>
     <%= f.submit "Answer", :class => "btn btn-light" %>
