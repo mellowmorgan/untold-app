@@ -5,10 +5,10 @@ class Request < ApplicationRecord
   validate :categories_must_exist
   validates :status, presence: true, inclusion: { in: ["submitted","approved","published","flagged","denied"]}
   has_many :descriptions
-  scope :most_recently_added_published, -> { where(status:"published").order(created_at: :desc).limit(10)}
+  scope :most_recently_added_published, -> { where(status:"published").order(created_at: :desc).limit(7)}
   scope :most_recently_added_all_published, -> { where(status:"published").order(created_at: :desc)}
   scope :most_recently_added_all_approved, -> { where(status:"approved").order(created_at: :desc)}
-  scope :most_recently_added_approved, -> { where(status:"approved").order(created_at: :desc).limit(10)}
+  scope :most_recently_added_approved, -> { where(status:"approved").order(created_at: :desc).limit(7)}
   def downcase_categories
     self.categories = self.categories.map{|word| word.downcase }
   end

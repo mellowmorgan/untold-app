@@ -1,9 +1,12 @@
 .my-container{
-  margin-left:40px;
-  margin-right:40px;
+  margin-left:60px;
+  margin-right:60px;
   font-family:sans-serif;
+  margin-bottom:60px;
 }
-
+.open-request h4{
+  font-size:20px;
+}
 .signup{    
     background-color: white;
     padding: 40px;
@@ -61,17 +64,15 @@ body{
 }
 .categories{
   margin:auto;
-  width:100%;
 }
 .category{
-  width:90%;
   max-width:200px;
   margin:10px;
   border-radius:4px;
   padding:10px;
-  font-size:20px;
+  font-size:18px;
   font-family:sans-serif;
-  font-weight:500;
+  min-width:fit-content;
 }
 .category a{
  color: black;
@@ -180,7 +181,6 @@ body{
 .open-request{
   padding:20px;
   margin:20px;
-  min-height:150px;
   border-radius:3px;
   background:white;
   border: solid 1px #dee0e1;
@@ -189,7 +189,6 @@ body{
 }
 .open-request h3{
   font-family:sans-serif;
-  font-weight: 700;
 }
 .open-request:hover{box-shadow: 0px 1px 4px rgba(0,0,0,0.08);}
 .home-row{margin-top:35px}

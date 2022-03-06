@@ -61,6 +61,7 @@ module Api
         end
       end
       private
+      
       def request_params
         params.permit(:user_id, :content,:status,:categories)
       end

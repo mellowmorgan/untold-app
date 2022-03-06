@@ -20,23 +20,43 @@ class RequestsController < ApplicationController
       format.js {render layout: false}
     end
   end
+
+  def add_description
+    desc = Description.new(description_params)
+    if desc.save()
+      flash[:notice] = "Your description has been added."
+      redirect_back(fallback_location: root_path)
+    else
+      flash[:notice] = "There was an error adding your description."
+      redirect_back(fallback_location: root_path)
+    end
+  end
+
   def add_request
+    # binding.pry
     if request_params["categories"]
       str_categories = request_params["categories"]
       array_categories = str_categories.gsub(/\s+/, "").split(",")
+
+      request = Request.new(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],categories: array_categories)
+    else 
+      request_strong_params["categories"]
+      str_categories = request_strong_params["categories"]
+      array_categories = str_categories.gsub(/\s+/, "").split(",")
+      request = Request.new(status:request_strong_params["status"],user_id:request_strong_params["user_id"],content: request_strong_params["content"],categories: array_categories)
     end 
-    request = Request.new(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],categories: array_categories)
+   
     if request.save
       @requests_approved = Request.most_recently_added_all_approved.paginate(page: params[:page], per_page: 10)
       flash[:notice] = "Your request has been added."
-      redirect_to '/requests/open'
+      redirect_back(fallback_location: root_path)
     else
       errors = ""
       if request.errors.any?
         errors = request.errors.full_messages.join(", ")
       end
       flash[:alert] = "There was an error adding your request. #{errors}."
-      redirect_to '/requests/open'
+      redirect_back(fallback_location: root_path)
     end
   end
   def open
@@ -61,7 +81,16 @@ class RequestsController < ApplicationController
     new_array
   end
   private
+  def request_strong_params
+    params.require(:request).permit(:user_id, :content,:status,:categories)
+
+  end
+
   def request_params
+
     params.permit(:user_id, :content,:status,:categories)
+  end
+  def description_params
+    params.permit(:user_id, :request_id, :content,:status)
   end
 end
