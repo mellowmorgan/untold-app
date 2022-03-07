@@ -26,25 +26,28 @@
 </div>
 </div>
 
-  
+<div class="answered-requests-home-section-title"> <%= image_tag("squiggle.png",size:"24x24",style:"margin-right:6px;margin-bottom:10px;")%><h3 style="display: inline;"><%= link_to "Answered Requests", requests_answered_path %></h3></div>
+
 <%= render partial: 'layouts/published_posts', locals: { requests_published: @requests_published} %>
-<%= link_to "View all answered requests", requests_answered_path %>
+
 
 
 
 </div>
 <div class="col-md-4">
+<div class="open-requests-home-section-title"> <%= image_tag("squiggle.png",size:"24x24",style:"margin-right:6px;margin-bottom:10px")%><h3 style="display: inline;"><%= link_to "View All", requests_open_path %></h3></div>
 <div class="open-requests-section-home">
 <div class="open-request-list">
 <% if @requests_approved.any? %>
   <% @requests_approved.each do |request| %>
-    <div class="open-request"><h4><%= request.content %></h4> 
-    <div><button class="btn btn-light">Answer</button></div>
+    <%= link_to request_path(request) do %>
+    <div  class="open-request"><h4><%= request.content %></h4> 
+    <div style="text-align:right;"><button class="btn btn-light">Answer</button></div>
    </div>
-    
+    <% end %>
   <% end %>
+  
 <% end %>
-<%= link_to "View all open requests", requests_open_path %>
 </div>
 </div>
 </div>

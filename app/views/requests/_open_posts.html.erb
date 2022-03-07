@@ -2,9 +2,8 @@
   <h3><span style="margin-left:40px;">Open Requests</span></h3>
   <% requests_approved.each do |request| %>
     <div class="open-request"><h4><%= request.content %> </h4>
-    <div><button>Answer</button></div>
-    <div>thumbs up | 25 | report</div></div>
-    
+    <div style="text-align:right"><button class="btn btn-light">Answer</button></div>
+    </div>
   <% end %>
   <% else %>
   <p>No requests found.</p>

@@ -4,6 +4,13 @@
   font-family:sans-serif;
   margin-bottom:60px;
 }
+
+.form-control{
+  height:42px;
+}
+textarea{
+  height:84px !important;
+}
 .open-request h4{
   font-size:20px;
 }
@@ -94,7 +101,9 @@ body{
 }
 .categories{
   margin:auto;
+
 }
+.categories .title{border-bottom: 2px solid black;width:fit-content;padding-left:10px;padding-right:10px;margin-bottom:20px;}
 .category{
   max-width:200px;
   margin:10px;
@@ -152,13 +161,12 @@ body{
 
 .add-request{
   margin:20px;
+  margin-bottom: 45px;
   
   border: solid 1px #dee0e1;
 }
 .add-request-form{
   padding:45px;
-
-  
 }
 .add-description{
   margin:20px;
@@ -170,8 +178,15 @@ body{
 
   
 }
+
 #published-requests-section a{
-  text-decoration: none;
+  
+  color:black;
+}
+
+
+.open-requests-section-home a{
+  
   color:black;
 }
 .published-request{
@@ -222,8 +237,30 @@ body{
 }
 .open-request:hover{box-shadow: 0px 1px 4px rgba(0,0,0,0.08);}
 .home-row{margin-top:35px}
+.answered-requests-home-section-title{
+  border-bottom: 2px solid black;margin:auto; width:75%; text-align:center;
+  margin-bottom:30px;
+}
+.open-requests-home-section-title{
+  border-bottom: 2px solid black;margin:auto; width:75%; text-align:center; 
+  margin-bottom:30px;
+  margin-top:20px;
+}
+.answered-requests-home-section-title a{
 
-
+  color:black;
+}
+.answered-requests-home-section-title a:hover{
+  color:rgb(140, 140, 140);
+  text-decoration: none;
+}
+.open-requests-home-section-title a{
+  color:black;
+}
+.open-requests-home-section-title a:hover{
+  color:rgb(125, 125, 125);
+  text-decoration: none;
+}
 .my-nav-bar{
   background-color: white;
   min-height:68px;
@@ -235,10 +272,16 @@ body{
   top: 0;
   width: 100%; */
 }
+
 .nav-title{
   float:left;
   margin-left:50px;
 }
+.nav-title a{
+  text-decoration: none;
+  color: black;
+}
+
 .nav-title h2{
   margin: .5rem 0;
   text-align:center;
