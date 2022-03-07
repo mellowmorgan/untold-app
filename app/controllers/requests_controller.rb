@@ -25,7 +25,7 @@ class RequestsController < ApplicationController
     # binding.pry
     if Description.create!(description_params)
       request = Request.find(params[:request_id])
-      request.update(status="published")
+      request.update(status:"published")
       flash[:notice] = "Your description has been added."
       redirect_back(fallback_location: root_path)
     else
