@@ -1,7 +1,9 @@
 <% if requests_published.any? %>
   <h3><span style="margin-left:20px;">Answered Requests</span></h3>
   <% requests_published.each do |request| %>
+    <%= link_to request_path(request) do %>
     <div class="published-request"><%= request.content %>
+    <% end %>
     <% if request.image.attached? %>
           <%= image_tag request.image, class:"request-open-image-show" %>
           <% end %>

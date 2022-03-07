@@ -2,11 +2,12 @@
 <div style="width:60%; margin:auto; margin-top:50px;">
 
 <h2><%= @request.content %></h2>
-<h4>Request Author: <%= link_to User.find(@request.user_id).username, root_path %></h4>
+
+<h5>Request Author: <%= link_to User.find(@request.user_id).username, root_path %></h5>
 <% if @request.image.attached? %>
           <%= image_tag @request.image, class:"request-open-image-show" %>
           <% end %>
-<div class="add-description">
+<div class="add-description" style="margin-top:50px;">
 <div class="add-description-title-box">Answer this Request</div>
 
 <div class="add-description-form">
@@ -26,12 +27,12 @@
   <% end %>
 </div>
 </div>
-<div> <h4><%=@request.descriptions.length%> <% if @request.descriptions.length==1 %>Answer<% else %>Descriptions<% end %></h4></div>
+<div style="margin-top:50px;margin-left:20px;"> <h4><%=@request.descriptions.length%> <% if @request.descriptions.length==1 %>Answer<% else %>Descriptions<% end %></h4></div>
 <div>
 <% if @request.status=="published" && @request.descriptions.any? %>
   <% @request.descriptions.each do |desc| %>
     <div class="published-desc">
-  <%= desc.content %>
+<%= desc.content %>
     <h5>Description Author: <%= link_to User.find(desc.user_id).username, root_path %></h5>
     </div>
   <% end %>
