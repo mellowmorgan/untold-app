@@ -55,12 +55,15 @@ class RequestsController < ApplicationController
     end 
     
     if request.save
-      if request_params[:image]
+      if requests_params[:image_url]
+        request.grab_image(requests_params[:image_url])
+      elsif requests_strong_params[:image_url]
+          request.grab_image(requests_strong_params[:image_url])
+      elsif request_params[:image]
         request.image.attach(request_params[:image])
-      end
-    if request_strong_params[:image]
+      elsif request_strong_params[:image]
       request.image.attach(request_strong_params[:image])
-    end
+      end
  
       @requests_approved = Request.most_recently_added_all_approved.paginate(page: params[:page], per_page: 10)
       flash[:notice] = "Your request has been added."
@@ -97,11 +100,11 @@ class RequestsController < ApplicationController
   end
   private
   def request_strong_params
-    params.require(:request).permit(:user_id, :image, :content,:status,:categories)
+    params.require(:request).permit(:user_id, :image, :image_url,:content,:status,:categories)
   end
 
   def request_params
-    params.permit(:user_id, :image, :content,:status,:categories)
+    params.permit(:user_id, :image, :image_url, :content,:status,:categories)
   end
   def description_params
     params.permit(:user_id, :request_id, :content,:status)
