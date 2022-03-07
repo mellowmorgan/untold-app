@@ -183,6 +183,9 @@ body{
 h2{
   font-size: 32px;
 }
+.published-request a {
+  color:black;
+}
 .request-open-image-home{
   max-width:100%;
   max-height:100%;

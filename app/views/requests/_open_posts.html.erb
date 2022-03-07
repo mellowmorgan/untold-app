@@ -1,7 +1,7 @@
 <% if requests_approved.any? %>
   <h3><span style="margin-left:40px;">Open Requests</span></h3>
   <% requests_approved.each do |request| %>
-    <div class="open-request"><h4><%= request.content %> </h4>
+    <div class="open-request"><h3><%= request.content %> </h3>
     <% if request.image.attached? %>
           <%= image_tag request.image, class:"request-open-image-show" %>
           <% end %>
