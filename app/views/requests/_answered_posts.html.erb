@@ -2,7 +2,10 @@
   <h3><span style="margin-left:20px;">Answered Requests</span></h3>
   <% requests_published.each do |request| %>
     <div class="published-request"><%= request.content %>
-    <div class="answer-home"><%= request.descriptions.order("rating DESC").first.content %></div>
+    <% if request.image.attached? %>
+          <%= image_tag request.image %>
+          <% end %>
+    <div class="answer-home"><%= request.descriptions.order(created_at: :desc).first.content %></div>
 
     </div>
   

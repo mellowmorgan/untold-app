@@ -178,7 +178,11 @@ body{
 
   
 }
-
+.request-open-image-home{
+  max-width:100%;
+  max-height:100%;
+  margin-bottom:15px;
+}
 #published-requests-section a{
   
   color:black;

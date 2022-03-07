@@ -1,4 +1,5 @@
 class Request < ApplicationRecord
+  has_one_attached :image
   belongs_to :user
   before_save :downcase_categories
   validates :content, presence: true

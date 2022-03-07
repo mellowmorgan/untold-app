@@ -45,8 +45,15 @@ class RequestsController < ApplicationController
       array_categories = str_categories.gsub(/\s+/, "").split(",")
       request = Request.new(status:request_strong_params["status"],user_id:request_strong_params["user_id"],content: request_strong_params["content"],categories: array_categories)
     end 
-   
+    
     if request.save
+      if request_params[:image]
+        request.image.attach(request_params[:image])
+      end
+    if request_strong_params[:image]
+      request.image.attach(request_strong_params[:image])
+    end
+    binding.pry
       @requests_approved = Request.most_recently_added_all_approved.paginate(page: params[:page], per_page: 10)
       flash[:notice] = "Your request has been added."
       redirect_back(fallback_location: root_path)
@@ -82,13 +89,11 @@ class RequestsController < ApplicationController
   end
   private
   def request_strong_params
-    params.require(:request).permit(:user_id, :content,:status,:categories)
-
+    params.require(:request).permit(:user_id, :image, :content,:status,:categories)
   end
 
   def request_params
-
-    params.permit(:user_id, :content,:status,:categories)
+    params.permit(:user_id, :image, :content,:status,:categories)
   end
   def description_params
     params.permit(:user_id, :request_id, :content,:status)

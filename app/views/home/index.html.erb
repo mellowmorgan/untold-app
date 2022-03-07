@@ -4,7 +4,8 @@
 <%= render 'layouts/sidebar_menu' %>
 </div>
 <div class="col-md-6">
-
+<%= flash[:notice] %>
+<%= flash[:alert] %>
 <div class="add-request">
 <div class="add-request-title-box">Add a Request</div>
 
@@ -14,7 +15,9 @@
   <%= f.label "Request:" %><br />
   <%= f.text_area :content, :class => 'form-control',  autocomplete: true, 
   placeholder:"What does fire look like?" %><br />
-  <%= f.label "Tags (optional):" %><br />
+  <%= f.label "Upload an image (optional):"%>
+  <%= f.file_field :image, accept: 'image/png, image/gif, image/jpeg'  %><br />
+  <%= f.label "Categories (optional):" %><br />
   <%= f.text_field :categories, :class => 'form-control', autocomplete: true, placeholder:"Example: miscellaneous, nature" %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <%= f.hidden_field :status, :value => "approved" %>
@@ -35,13 +38,16 @@
 
 </div>
 <div class="col-md-4">
-<div class="open-requests-home-section-title"> <%= image_tag("squiggle.png",size:"24x24",style:"margin-right:6px;margin-bottom:10px")%><h3 style="display: inline;"><%= link_to "View All", requests_open_path %></h3></div>
+<div class="open-requests-home-section-title"> <%= image_tag("squiggle.png",size:"24x24",style:"margin-right:6px;margin-bottom:10px")%><h3 style="display: inline;"><%= link_to "Open Requests", requests_open_path %></h3></div>
 <div class="open-requests-section-home">
 <div class="open-request-list">
 <% if @requests_approved.any? %>
   <% @requests_approved.each do |request| %>
     <%= link_to request_path(request) do %>
-    <div  class="open-request"><h4><%= request.content %></h4> 
+    <div  class="open-request"><h3><%= request.content %></h3> 
+    <% if request.image.attached? %>
+          <%= image_tag request.image, class:"request-open-image-home" %>
+          <% end %>
     <div style="text-align:right;"><button class="btn btn-light">Answer</button></div>
    </div>
     <% end %>

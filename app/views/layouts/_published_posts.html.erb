@@ -5,6 +5,9 @@
       <%= link_to request_path(request) do %>
         <div class="published-request">
           <h3><%= request.content %></h3>
+          <% if request.image.attached? %>
+          <%= image_tag request.image %>
+          <% end %>
           <% end %>
           <div class="answer-home" style="text-decoration:none !important">
             <%= request.descriptions.order(created_at: :desc).first.content %>
