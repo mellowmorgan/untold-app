@@ -46,19 +46,18 @@ class RequestsController < ApplicationController
       str_categories = request_params["categories"]
       array_categories = str_categories.gsub(/\s+/, "").split(",")
 
-      request = Request.new(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],categories: array_categories)
+      request = Request.new(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],image_url: request_params["image_url"],categories: array_categories)
     else 
       request_strong_params["categories"]
       str_categories = request_strong_params["categories"]
       array_categories = str_categories.gsub(/\s+/, "").split(",")
-      request = Request.new(status:request_strong_params["status"],user_id:request_strong_params["user_id"],content: request_strong_params["content"],categories: array_categories)
+      request = Request.new(image_url: request_strong_params["image_url"],status:request_strong_params["status"],user_id:request_strong_params["user_id"],content: request_strong_params["content"],categories: array_categories)
     end 
     
     if request.save
-      if requests_params[:image_url]
-        request.grab_image(requests_params[:image_url])
-      elsif requests_strong_params[:image_url]
-          request.grab_image(requests_strong_params[:image_url])
+      # binding.pry
+      if request.image_url
+        request.grab_image
       elsif request_params[:image]
         request.image.attach(request_params[:image])
       elsif request_strong_params[:image]
@@ -94,7 +93,7 @@ class RequestsController < ApplicationController
     new_array = []
     requests.each do |entry|
       obj=Request.new(id:entry[0], content:entry[1], status:entry[2], user_id:entry[3],created_at:entry[4],updated_at:entry[5],categories:entry[6])
-      new_array.push(obj)
+      new_array.unshift(obj)
     end
     new_array
   end

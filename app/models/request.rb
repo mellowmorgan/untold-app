@@ -15,9 +15,11 @@ class Request < ApplicationRecord
   def downcase_categories
     self.categories = self.categories.map{|word| word.downcase }
   end
-  def grab_image(image_url)
-    image_from_url = open(self.image_url)
-    self.image.attach(io: image_from_url, filename: "#{self.id}.jpg")
+  def grab_image
+    if self.image_url
+      image_from_url = open(self.image_url)
+      self.image.attach(io: image_from_url, filename: "#{self.id}.jpg")
+    end
   end
   def categories_must_exist
     valid_categories=["people","popular","nature","miscellaneous","objects","landmarks","buildings","animals"]

@@ -28,8 +28,11 @@ module Api
           str_categories = request_params["categories"]
           array_categories = str_categories.gsub(/\s+/, "").split(",")
         end 
-        
-        if Request.create!(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],categories: array_categories)
+        request = Request.new(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],categories: array_categories, image_url: request_params["image_url"])
+        if request.save
+          if request.image_url
+            request.grab_image
+          end
           render status: 200, json: {
           message: "Request added successfully."
           }
@@ -63,7 +66,7 @@ module Api
       private
       
       def request_params
-        params.permit(:user_id, :content,:status,:categories)
+        params.permit(:user_id, :image_url,:content,:status,:categories)
       end
     end
   end

@@ -11,7 +11,7 @@
           <% end %>
          
           <div class="answer-home" style="text-decoration:none !important">
-            <%= request.descriptions.order(created_at: :desc).first.content %>
+            Answer: <%= request.descriptions.order(created_at: :desc).first.content %>
           </div>
             
         </div>
