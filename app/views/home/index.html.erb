@@ -46,7 +46,7 @@
     <%= link_to request_path(request) do %>
     <div  class="open-request"><h3><%= request.content %></h3> 
     <% if request.image.attached? %>
-          <%= image_tag request.image, class:"request-open-image-home" %>
+          <%= image_tag request.image, class:"request-open-image-show" %>
           <% end %>
     <div style="text-align:right;"><button class="btn btn-light">Answer</button></div>
    </div>

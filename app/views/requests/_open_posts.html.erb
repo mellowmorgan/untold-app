@@ -3,7 +3,7 @@
   <% requests_approved.each do |request| %>
     <div class="open-request"><h4><%= request.content %> </h4>
     <% if request.image.attached? %>
-          <%= image_tag request.image %>
+          <%= image_tag request.image, class:"request-open-image-show" %>
           <% end %>
     <div style="text-align:right"><button class="btn btn-light">Answer</button></div>
     </div>

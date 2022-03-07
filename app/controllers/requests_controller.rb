@@ -24,6 +24,8 @@ class RequestsController < ApplicationController
   def add_description
     # binding.pry
     if Description.create!(description_params)
+      request = Request.find(params[:request_id])
+      request.update(status="published")
       flash[:notice] = "Your description has been added."
       redirect_back(fallback_location: root_path)
     else
@@ -53,7 +55,7 @@ class RequestsController < ApplicationController
     if request_strong_params[:image]
       request.image.attach(request_strong_params[:image])
     end
-    binding.pry
+ 
       @requests_approved = Request.most_recently_added_all_approved.paginate(page: params[:page], per_page: 10)
       flash[:notice] = "Your request has been added."
       redirect_back(fallback_location: root_path)

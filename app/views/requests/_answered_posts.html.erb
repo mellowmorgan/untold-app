@@ -3,7 +3,7 @@
   <% requests_published.each do |request| %>
     <div class="published-request"><%= request.content %>
     <% if request.image.attached? %>
-          <%= image_tag request.image %>
+          <%= image_tag request.image, class:"request-open-image-show" %>
           <% end %>
     <div class="answer-home"><%= request.descriptions.order(created_at: :desc).first.content %></div>
 

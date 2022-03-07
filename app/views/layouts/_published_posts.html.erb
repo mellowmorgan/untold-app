@@ -6,7 +6,7 @@
         <div class="published-request">
           <h3><%= request.content %></h3>
           <% if request.image.attached? %>
-          <%= image_tag request.image %>
+          <%= image_tag request.image, :class=>"request-answered-image-home" %>
           <% end %>
           <% end %>
           <div class="answer-home" style="text-decoration:none !important">

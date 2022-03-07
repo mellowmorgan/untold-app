@@ -1,8 +1,11 @@
 <div class="my-container">
-<div style="width:60%; margin:auto">
+<div style="width:60%; margin:auto; margin-top:50px;">
 
 <h2><%= @request.content %></h2>
-<h5>Request Author: <%= link_to User.find(@request.user_id).username, root_path %></h5>
+<h4>Request Author: <%= link_to User.find(@request.user_id).username, root_path %></h4>
+<% if @request.image.attached? %>
+          <%= image_tag @request.image, class:"request-open-image-show" %>
+          <% end %>
 <div class="add-description">
 <div class="add-description-title-box">Answer this Request</div>
 
