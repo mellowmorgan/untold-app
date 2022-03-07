@@ -1,13 +1,16 @@
 <div class="my-container">
 <div style="width:60%; margin:auto; margin-top:50px;">
-
+<%= flash[:notice] %>
+<%= flash[:alert] %>
 <h2><%= @request.content %></h2>
 
 <h5>Request Author: <%= link_to User.find(@request.user_id).username, root_path %></h5>
 <% if @request.image.attached? %>
           <%= image_tag @request.image, class:"request-open-image-show" %>
           <% end %>
+
 <div class="add-description" style="margin-top:50px;">
+
 <div class="add-description-title-box">Answer this Request</div>
 
 <div class="add-description-form">

@@ -22,14 +22,20 @@ class RequestsController < ApplicationController
   end
 
   def add_description
-    # binding.pry
-    if Description.create!(description_params)
-      request = Request.find(params[:request_id])
+    request = Request.find(description_params[:request_id])
+    description = request.descriptions.new(description_params)
+    
+    if description.save
       request.update(status:"published")
       flash[:notice] = "Your description has been added."
       redirect_back(fallback_location: root_path)
     else
-      flash[:notice] = "There was an error adding your description."
+      errors = ""
+      if description.errors.any?
+        errors = description.errors.full_messages.join(", ")
+      end
+      flash[:alert] = "There was an error adding your description. #{errors}."
+      
       redirect_back(fallback_location: root_path)
     end
   end

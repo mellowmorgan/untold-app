@@ -16,9 +16,14 @@
 
 </div>
 <div class="col-md-9">
+
 <div class="open-requests-section">
+<%= flash[:notice] %>
+<%= flash[:alert] %>
 <h3>Add a Request</h3>
+
 <div class="add-request">
+
 <div class="add-request-form">
   <%= form_with(url: "/requests/add_request", method: :post, model: @request) do |f| %>
     <div class="form-group">
