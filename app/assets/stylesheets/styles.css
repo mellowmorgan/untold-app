@@ -1,10 +1,11 @@
 .my-container{
+
   margin-left:60px;
   margin-right:60px;
   font-family:sans-serif;
   margin-bottom:60px;
 }
-
+body{  min-width: 475px;}
 .form-control{
   height:42px;
 }
@@ -108,7 +109,7 @@ body{
 .categories .title{border-bottom: 2px solid black;width:fit-content;padding-left:10px;padding-right:10px;margin-bottom:20px;}
 .category{
   max-width:200px;
-  margin:10px;
+  margin:5px;
   border-radius:4px;
   padding:10px;
   font-size:18px;
@@ -233,7 +234,6 @@ h5{font-size:17px;}
 }
 .open-requests-section{
   width:80%;
-  
 }
 .open-requests-section a{
   color:black;
@@ -241,7 +241,6 @@ h5{font-size:17px;}
 }
 .answered-requests-section{
   width:80%;
-  
 }
 @media (max-width: 991px) {
   .open-requests-section{ 

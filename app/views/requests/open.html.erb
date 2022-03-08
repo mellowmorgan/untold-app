@@ -2,7 +2,7 @@
 <div class="row home-row">
 <div class="col-md-3 left-col">
 <div class="categories">
-<h3><span style="margin-left:20px;">Categories</span></h3>
+<div class="title"><h3>Categories</h3></div>
 <div class="category"><%= link_to "Popular", fetch_open_posts_path(:category => "popular"), :remote => true,data: {type: "script"} %></div>
 <div class="category"><%= link_to "Nature", fetch_open_posts_path(:category => "nature"), :remote => true,data: {type: "script"} %></div>
 
@@ -18,12 +18,12 @@
 <div class="col-md-9">
 
 <div class="open-requests-section">
+<div class="open-requests-home-section-title"> <%= image_tag("squiggle.png",size:"24x24",style:"margin-right:6px;margin-bottom:10px")%><h3 style="display: inline;">Open Requests</h3></div>
 <%= flash[:notice] %>
 <%= flash[:alert] %>
-<h3>Add a Request</h3>
 
 <div class="add-request">
-
+<div class="add-request-title-box">Add a Request</div>
 <div class="add-request-form">
   <%= form_with(url: "/requests/add_request", method: :post, model: @request) do |f| %>
     <div class="form-group">

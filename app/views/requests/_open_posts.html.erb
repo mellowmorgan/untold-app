@@ -1,5 +1,4 @@
 <% if requests_approved.any? %>
-  <h3><span style="margin-left:40px;">Open Requests</span></h3>
   <% requests_approved.each do |request| %>
     <%= link_to request_path(request) do %>
     <div class="open-request"><h3><%= request.content %> </h3><% end %>

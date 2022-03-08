@@ -48,7 +48,7 @@ class RequestsController < ApplicationController
 
       request = Request.new(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],image_url: request_params["image_url"],categories: array_categories)
     else 
-      request_strong_params["categories"]
+      
       str_categories = request_strong_params["categories"]
       array_categories = str_categories.gsub(/\s+/, "").split(",")
       request = Request.new(image_url: request_strong_params["image_url"],status:request_strong_params["status"],user_id:request_strong_params["user_id"],content: request_strong_params["content"],categories: array_categories)

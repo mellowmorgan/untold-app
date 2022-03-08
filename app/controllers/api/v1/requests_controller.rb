@@ -24,11 +24,15 @@ module Api
 
       def create
         
-        if request_params["categories"]
+        if request_params[:categories]
           str_categories = request_params["categories"]
           array_categories = str_categories.gsub(/\s+/, "").split(",")
         end 
+        if !request_params[:categories]
+          array_categories = []
+        end
         request = Request.new(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],categories: array_categories, image_url: request_params["image_url"])
+   
         if request.save
           if request.image_url
             request.grab_image

@@ -2,7 +2,7 @@
 <div class="row home-row">
 <div class="col-md-3 left-col">
 <div class="categories">
-<h3><span style="margin-left:20px;">Categories</span></h3>
+<div class="title"><h3>Categories</h3></div>
 <div class="category"><%= link_to "Popular", fetch_answered_posts_path(:category => "popular"), :remote => true,data: {type: "script"} %></div>
 <div class="category"><%= link_to "Nature", fetch_answered_posts_path(:category => "nature"), :remote => true,data: {type: "script"} %></div>
 
