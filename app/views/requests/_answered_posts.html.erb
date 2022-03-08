@@ -1,5 +1,6 @@
-<% if requests_published.any? %>
 <div class="answered-requests-home-section-title"> <%= image_tag("squiggle.png", alt:"an image of a small cute squiggle just for decoration", size:"24x24",style:"margin-right:6px;margin-bottom:10px;")%><h3 style="display: inline;">Answered Requests</h3></div>
+<% if requests_published.any? %>
+
   <% requests_published.each do |request| %>
     <%= link_to request_path(request) do %>
     <div class="published-request"><h3><%= request.content %></h3>
