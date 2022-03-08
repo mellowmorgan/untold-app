@@ -1,4 +1,4 @@
-require('pry')
+
 class RequestsController < ApplicationController
   include Devise::Controllers
   def from_open_category
@@ -6,7 +6,7 @@ class RequestsController < ApplicationController
     query = "select * from requests where '#{clicked_category}'=ANY(categories) AND status='approved';"
     result = ActiveRecord::Base.connection.execute(query)
     @requests_approved = helper_values(result.values)
-    # binding.pry
+ 
     respond_to do |format|
       format.js {render layout: false}
     end
@@ -79,10 +79,8 @@ class RequestsController < ApplicationController
     str_categories = request_strong_params["categories"]
     array_categories = str_categories.gsub(/\s+/, "").split(",")
     request = Request.new(image_url: image_url,status:request_strong_params["status"],user_id:request_strong_params["user_id"],content: request_strong_params["content"],categories: array_categories)
-    
-    # binding.pry
+
     if request.save
-      # binding.pry
       if request.image_url
         request.grab_image
       elsif request_strong_params[:image]

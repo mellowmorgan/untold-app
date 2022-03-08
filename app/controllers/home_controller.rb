@@ -1,4 +1,4 @@
-require('pry')
+
 class HomeController < ApplicationController
   include Devise::Controllers
   def from_category 
@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     query = "select * from requests where '#{clicked_category}'=ANY(categories) AND status='published' LIMIT 10;"
     result = ActiveRecord::Base.connection.execute(query)
     @requests_published = helper_values(result.values)
-    # binding.pry
+    
     respond_to do |format|
       format.js {render layout: false}
     end
@@ -22,7 +22,6 @@ class HomeController < ApplicationController
     render :contact
   end
   def help_send
-    # binding.pry
     ContactMailer.send_email.deliver_now
     flash[:notice] = "Your message has been sent. Thank you."
     render :contact
