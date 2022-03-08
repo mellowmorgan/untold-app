@@ -17,7 +17,8 @@ class Request < ApplicationRecord
   end
   def grab_image
     if self.image_url
-      image_from_url = open(self.image_url)
+      
+      image_from_url = URI.open(self.image_url)
       self.image.attach(io: image_from_url, filename: "#{self.id}.jpg")
     end
   end

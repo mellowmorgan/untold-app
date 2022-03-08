@@ -30,8 +30,8 @@
     <%= f.label "Request:" %><br />
     <%= f.text_area :content, :class => 'form-control',  autocomplete: true, 
     placeholder:"What does fire look like?" %><br />
-    <%= f.label "Upload an image (optional):"%>
-  <%= f.file_field :image, accept: 'image/png, image/gif, image/jpeg', style:"margin-bottom:8px;" %>
+    <%= f.label "Upload an image (optional):"%><br />
+  <%= f.file_field :image, accept: 'image/png, image/gif, image/jpeg', style:"margin-bottom:8px;" %><br />
   <%= f.label "Or use an image address:"%>
   <%= f.text_field :image_url, :class => 'form-control', autocomplete: true %>
   <br />

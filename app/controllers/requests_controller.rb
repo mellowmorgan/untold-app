@@ -41,6 +41,7 @@ class RequestsController < ApplicationController
   end
 
   def add_request
+    
     if request_params["image_url"] == "" || request_strong_params["image_url"] == ""
       image_url = nil
     else
@@ -54,20 +55,19 @@ class RequestsController < ApplicationController
       str_categories = request_strong_params["categories"]
       array_categories = str_categories.gsub(/\s+/, "").split(",")
       request = Request.new(image_url: image_url,status:request_strong_params["status"],user_id:request_strong_params["user_id"],content: request_strong_params["content"],categories: array_categories)
-
+      
     end 
-    
+    # binding.pry
     if request.save
       # binding.pry
       if request.image_url
-        
         request.grab_image
       elsif request_params[:image]
         request.image.attach(request_params[:image])
-      elsif request_strong_params[:image]
+      elsif request_strong_params && request_strong_params[:image]
       request.image.attach(request_strong_params[:image])
       end
- 
+      
       @requests_approved = Request.most_recently_added_all_approved.paginate(page: params[:page], per_page: 10)
       flash[:notice] = "Your request has been added."
       redirect_back(fallback_location: root_path)
