@@ -12,6 +12,12 @@ body{  min-width: 475px;}
 textarea{
   height:84px !important;
 }
+.author-username a{
+  color:rgb(140, 140, 140);
+}
+.author-username a:hover{
+  color:black;
+}
 .open-request h4{
   font-size:20px;
 }
