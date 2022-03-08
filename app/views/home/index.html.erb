@@ -32,7 +32,7 @@
 </div>
 </div>
 
-<div class="answered-requests-home-section-title"> <%= image_tag("squiggle.png",size:"24x24",style:"margin-right:6px;margin-bottom:10px;")%><h3 style="display: inline;"><%= link_to "Answered Requests", requests_answered_path %></h3></div>
+<div class="answered-requests-home-section-title"> <%= image_tag("squiggle.png",size:"24x24",style:"margin-right:6px;margin-bottom:10px;", alt:"an image of a small cute squiggle just for decoration")%><h3 style="display: inline;"><%= link_to "Answered Requests", requests_answered_path %></h3></div>
 
 <%= render partial: 'layouts/published_posts', locals: { requests_published: @requests_published} %>
 
@@ -41,7 +41,7 @@
 
 </div>
 <div class="col-md-4">
-<div class="open-requests-home-section-title"> <%= image_tag("squiggle.png",size:"24x24",style:"margin-right:6px;margin-bottom:10px")%><h3 style="display: inline;"><%= link_to "Open Requests", requests_open_path %></h3></div>
+<div class="open-requests-home-section-title"> <%= image_tag("squiggle.png",size:"24x24",style:"margin-right:6px;margin-bottom:10px", alt:"an image of a small cute squiggle just for decoration")%><h3 style="display: inline;"><%= link_to "Open Requests", requests_open_path %></h3></div>
 <div class="open-requests-section-home">
 <div class="open-request-list">
 <% if @requests_approved.any? %>
@@ -49,7 +49,7 @@
     <%= link_to request_path(request) do %>
     <div  class="open-request"><h3><%= request.content %></h3> 
     <% if request.image.attached? %>
-          <%= image_tag(request.image, class:"request-open-image-home") %>
+          <%= image_tag(request.image, class:"request-open-image-home", alt:"image that goes with request: #{request.content}") %>
           <% end %>
     <div style="text-align:right;"><button class="btn btn-light">Answer</button></div>
    </div>
