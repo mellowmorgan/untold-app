@@ -1,3 +1,18 @@
+## Technologies Used
+
+* Ruby 2.7
+* Rails 6
+* Gems
+* JQuery3
+* PG
+* Bootstrap
+* HTML/CSS
+* Postman
+* open-uri
+* ActiveStorage
+* Postgres
+* pry
+
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -95,7 +110,9 @@ https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfm
 2. Links up top maybe not bright/striking enough? make bigger slightly to pass
 3. Add alts to all images, squiggle icon
 4. button answer, submit, post text should be bigger!
-
+5. Check ScreenReader on whole website
+6. Tab through whole website
+7. Upgrade ruby, rails to 2.7.3 and 6
 Resources - Bureau of internet accessibility https://www.boia.org/blog/5-quick-ways-to-self-check-the-accessibility-of-a-website and vision impaired people I spoke personally to. And I'd like to thank Matt Luker for connecting me with his vision impaired friend. Reddit user telling me I should let the user submit photos as part of the request because they lamented that they will freqently come across a photo on the internet and because alt text is so limited; they have no clue what the photo is, and why any sort of controversy or excitement might be like created because of it.
 
 How to make sure site is accessible?
@@ -106,15 +123,4 @@ User color contrast checker:
 https://color.a11y.com/ContrastPair/?bgcolor=1B1D1E&fgcolor=E27D53
 Check with Dark Reader/ a lot of users that are vision impaired, like those with tunnel vision or low vision use this chrome extension
 Can you use the site without clicking a single time? Tab through each button, form field, link?
-
-
-https://www.boia.org/blog/5-quick-ways-to-self-check-the-accessibility-of-a-website
-
-<%= inline_svg_tag 'heart-svg.svg', class:"heart-like-svg" %>
-<script>
-  $(".heart-like-svg").on("click", ()=>{
-    console.log("blah")
-    $(".heart-like-svg").addClass("heart-like-red");
-    
-  });
-</script>
+ScreenReader does it work on whole page fluidly??
