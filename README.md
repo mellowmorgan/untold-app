@@ -87,13 +87,28 @@ pop-up? modal video https://www.youtube.com/watch?v=gLWIYk0Sd38
 modal for reporting an answer or description 
 Weekend get likes and flag buttons, pop ups for latter, add username to published and approved and scriptions, styling put 4 hours in?
 
+### Tuesday, March 8
 Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
-use this:
 https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni
-read this:
+1. Placeholder too light? darkreader forms
+2. Form text make it bigger! all forms, signup too
+2. Links up top maybe not bright/striking enough? make bigger slightly to pass
+3. Add alts to all images, squiggle icon
+4. button answer, submit, post text should be bigger!
+
+Resources - Bureau of internet accessibility https://www.boia.org/blog/5-quick-ways-to-self-check-the-accessibility-of-a-website and vision impaired people I spoke personally to. And I'd like to thank Matt Luker for connecting me with his vision impaired friend. Reddit user telling me I should let the user submit photos as part of the request because they lamented that they will freqently come across a photo on the internet and because alt text is so limited; they have no clue what the photo is, and why any sort of controversy or excitement might be like created because of it.
+
+How to make sure site is accessible?
+Is there alt text for every image?
+Is the website still functional and no loss of content when zoomed in at 200%
+Does the text pop from the background with high contrast?
+User color contrast checker:
+https://color.a11y.com/ContrastPair/?bgcolor=1B1D1E&fgcolor=E27D53
+Check with Dark Reader/ a lot of users that are vision impaired, like those with tunnel vision or low vision use this chrome extension
+Can you use the site without clicking a single time? Tab through each button, form field, link?
+
+
 https://www.boia.org/blog/5-quick-ways-to-self-check-the-accessibility-of-a-website
-Sticky navbar:
-https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
 <%= inline_svg_tag 'heart-svg.svg', class:"heart-like-svg" %>
 <script>
