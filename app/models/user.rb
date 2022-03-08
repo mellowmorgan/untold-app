@@ -8,6 +8,8 @@ class User < ApplicationRecord
   # validates :password, presence: true
   # it seems to be mad at validates above, had to comment out to get it working
   validate :email_has
+  has_many :requests, dependent: :delete_all
+  has_many :descriptions, dependent: :delete_all
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 

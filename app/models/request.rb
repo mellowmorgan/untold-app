@@ -2,11 +2,11 @@ require 'open-uri'
 class Request < ApplicationRecord
   has_one_attached :image
   belongs_to :user
+  has_many :descriptions, dependent: :delete_all
   before_save :downcase_categories
   validates :content, presence: true
   validate :categories_must_exist
   validates :status, presence: true, inclusion: { in: ["submitted","approved","published","flagged","denied"]}
-  has_many :descriptions
   before_save :grab_image
   scope :most_recently_added_published, -> { where(status:"published").order(created_at: :desc).limit(7)}
   scope :most_recently_added_all_published, -> { where(status:"published").order(created_at: :desc)}
