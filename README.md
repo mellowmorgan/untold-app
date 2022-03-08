@@ -9,9 +9,11 @@
 * HTML/CSS
 * Postman
 * open-uri
+* Webpacker
 * ActiveStorage
 * Postgres
 * pry
+* Heroku
 
 # README
 
@@ -106,10 +108,9 @@ Weekend get likes and flag buttons, pop ups for latter, add username to publishe
 Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
 https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni
 1. Placeholder too light? darkreader forms
-2. Form text make it bigger! all forms, signup too
 2. Links up top maybe not bright/striking enough? make bigger slightly to pass
 3. Add alts to all images, squiggle icon
-4. button answer, submit, post text should be bigger!
+4. button answer, submit, post text should be bigger! Redo colors
 5. Check ScreenReader on whole website
 6. Tab through whole website
 7. Upgrade ruby, rails to 2.7.3 and 6

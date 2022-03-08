@@ -25,7 +25,7 @@
 <div class="add-request">
 <div class="add-request-title-box">Add a Request</div>
 <div class="add-request-form">
-  <%= form_with(url: "/requests/add_request", method: :post, model: @request) do |f| %>
+  <%= form_with(url: "/requests/open/add_request", method: :post, model: @request) do |f| %>
     <div class="form-group">
     <%= f.label "Request:" %><br />
     <%= f.text_area :content, :class => 'form-control',  autocomplete: true, 

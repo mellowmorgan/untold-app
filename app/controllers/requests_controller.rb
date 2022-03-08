@@ -39,33 +39,54 @@ class RequestsController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
   end
-
-  def add_request
-    
-    if request_params["image_url"] == "" || request_strong_params["image_url"] == ""
+  def add_request_open
+    if request_params["image_url"] == ""
       image_url = nil
     else
-      image_url = request_params["image_url"] || request_strong_params["image_url"]
+      image_url = request_params["image_url"]
     end
     if request_params["categories"]
       str_categories = request_params["categories"]
       array_categories = str_categories.gsub(/\s+/, "").split(",")
       request = Request.new(status:request_params["status"],user_id:request_params["user_id"],content: request_params["content"],image_url: image_url,categories: array_categories)
-    else 
-      str_categories = request_strong_params["categories"]
-      array_categories = str_categories.gsub(/\s+/, "").split(",")
-      request = Request.new(image_url: image_url,status:request_strong_params["status"],user_id:request_strong_params["user_id"],content: request_strong_params["content"],categories: array_categories)
-      
-    end 
+    end
+    if request.save
+      if request.image_url
+        request.grab_image
+      elsif request_params[:image]
+        request.image.attach(request_params[:image])
+      end
+      @requests_approved = Request.most_recently_added_all_approved.paginate(page: params[:page], per_page: 10)
+      flash[:notice] = "Your request has been added."
+      redirect_back(fallback_location: root_path)
+    else
+      errors = ""
+      if request.errors.any?
+        errors = request.errors.full_messages.join(", ")
+      end
+      flash[:alert] = "There was an error adding your request. #{errors}."
+      redirect_back(fallback_location: root_path)
+    end
+  end
+
+
+  def add_request_home
+    if request_strong_params["image_url"] == ""
+      image_url = nil
+    else
+      image_url = request_strong_params["image_url"]
+    end
+    str_categories = request_strong_params["categories"]
+    array_categories = str_categories.gsub(/\s+/, "").split(",")
+    request = Request.new(image_url: image_url,status:request_strong_params["status"],user_id:request_strong_params["user_id"],content: request_strong_params["content"],categories: array_categories)
+    
     # binding.pry
     if request.save
       # binding.pry
       if request.image_url
         request.grab_image
-      elsif request_params[:image]
-        request.image.attach(request_params[:image])
-      elsif request_strong_params && request_strong_params[:image]
-      request.image.attach(request_strong_params[:image])
+      elsif request_strong_params[:image]
+        request.image.attach(request_strong_params[:image])
       end
       
       @requests_approved = Request.most_recently_added_all_approved.paginate(page: params[:page], per_page: 10)
