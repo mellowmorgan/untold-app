@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordInvalid do |exception|
     json_response({ message: exception.message }, :unprocessable_entity)
   end
-
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up,keys: [:username])
 end
 
