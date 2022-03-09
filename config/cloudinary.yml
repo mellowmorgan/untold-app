@@ -1,11 +1,11 @@
 development: 
-  cloud_name: "dntx9ehds"
-  api_key: "646947548162925"
-  api_secret: "Ycp2wBI7hxz2vhj4ls9GSSe2OPU"
+  cloud_name: "hkbjwypvm"
+  api_key: "881343788991167"
+  api_secret: "tLuZKFPtCzJxrBp31M1G258pAa0"
   secure: true
 
 production:
-  cloud_name: "dntx9ehds"
-  api_key: "646947548162925"
-  api_secret: "Ycp2wBI7hxz2vhj4ls9GSSe2OPU"
+  cloud_name: "hkbjwypvm"
+  api_key: "881343788991167"
+  api_secret: "tLuZKFPtCzJxrBp31M1G258pAa0"
   secure:true
