@@ -105,15 +105,16 @@ modal for reporting an answer or description
 Weekend get likes and flag buttons, pop ups for latter, add username to published and approved and scriptions, styling put 4 hours in?
 
 ### Tuesday, March 8
-Read https://fuzzymath.com/blog/improve-accessibility-for-visually-impaired-users/ 
-https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni
-1. Placeholder too light? darkreader forms
-2. Links up top maybe not bright/striking enough? make bigger slightly to pass
-3. Add alts to all images, squiggle icon
-4. button answer, submit, post text should be bigger! Redo colors
-5. Check ScreenReader on whole website
-6. Tab through whole website
-7. Upgrade ruby, rails to 2.7.3 and 6
+
+* Allow manual font size adjustment STRETCH GOALS
+
+1. Check ScreenReader on whole website
+2. https://www.thecut.com/2014/07/could-you-describe-colors-to-a-blind-person.html
+3. Tab through whole website
+4. Practice presentation make notes
+
+98% of U.S.-based webpages are not accessible to the disability community from a legal perspective, according to the 2020 Web Accessibility Annual Report
+
 Resources - Bureau of internet accessibility https://www.boia.org/blog/5-quick-ways-to-self-check-the-accessibility-of-a-website and vision impaired people I spoke personally to. And I'd like to thank Matt Luker for connecting me with his vision impaired friend. Reddit user telling me I should let the user submit photos as part of the request because they lamented that they will freqently come across a photo on the internet and because alt text is so limited; they have no clue what the photo is, and why any sort of controversy or excitement might be like created because of it.
 
 How to make sure site is accessible?
@@ -125,3 +126,4 @@ https://color.a11y.com/ContrastPair/?bgcolor=1B1D1E&fgcolor=E27D53
 Check with Dark Reader/ a lot of users that are vision impaired, like those with tunnel vision or low vision use this chrome extension
 Can you use the site without clicking a single time? Tab through each button, form field, link?
 ScreenReader does it work on whole page fluidly??
+Use headings to organize page content and descriptive titles
