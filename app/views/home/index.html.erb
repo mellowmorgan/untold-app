@@ -47,13 +47,13 @@
 <% if @requests_approved.any? %>
   <% @requests_approved.each do |request| %>
     <%= link_to request_path(request) do %>
-    <div  class="open-request"><h3><%= request.content %></h3> 
+    <div  class="open-request"><h3><%= request.content %></h3> <% end %>
     <% if request.image.attached? %>
           <%= cl_image_tag(request.image.key, cloud_name: "hkbjwypvm", class:"request-open-image-home", alt:"image that goes with request: #{request.content}") %>
-          <% end %>
-    <div style="text-align:right;"><button class="btn btn-light">Answer</button></div>
+          
+    <div style="text-align:right;"><%= button_to "Answer", request_path(request), class:"btn btn-light" %></div>
    </div>
-    <% end %>
+   <% end %>
   <% end %>
   <% else %>
   <div style="margin:40px;text-align:center;"> <h4>No requests found.</h4></div>
