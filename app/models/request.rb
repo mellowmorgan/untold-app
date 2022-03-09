@@ -23,7 +23,7 @@ class Request < ApplicationRecord
     end
   end
   def categories_must_exist
-    valid_categories=["people","popular","nature","miscellaneous","objects","landmarks","buildings","animals"]
+    valid_categories=["people","popular","nature","miscellaneous","objects", "art", "photography","landmarks","buildings","history","animals"]
     valid_checker=true
     if self.categories
       self.categories.each do |word|
