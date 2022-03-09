@@ -1,11 +1,11 @@
 development: 
   cloud_name: "dntx9ehds"
   api_key: "646947548162925"
-  api_secret: ENV['API_SECRET_CLOUDINARY']
+  api_secret: "Ycp2wBI7hxz2vhj4ls9GSSe2OPU"
   secure: true
 
 production:
   cloud_name: "dntx9ehds"
   api_key: "646947548162925"
-  api_secret: ENV['API_SECRET_CLOUDINARY']
+  api_secret: "Ycp2wBI7hxz2vhj4ls9GSSe2OPU"
   secure:true
