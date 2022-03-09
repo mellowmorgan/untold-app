@@ -44,7 +44,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'open-uri'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'cloudinary', '~> 1.18.1'
+gem 'cloudinary', '~> 1.9.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails'
