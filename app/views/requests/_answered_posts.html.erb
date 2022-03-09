@@ -6,7 +6,7 @@
     <div class="published-request"><h3><%= request.content %></h3>
     <% end %>
     <% if request.image.attached? %>
-          <%= image_tag request.image, class:"request-open-image-show",alt:"image that goes with request: #{request.content}" %>
+          <%= cl_image_tag(request.image.key, cloud_name: "dntx9ehds", class:"request-open-image-show",alt:"image that goes with request: #{request.content}") %>
           <% end %>
     <div class="answer-home"><%= request.descriptions.order(created_at: :desc).first.content %></div>
 

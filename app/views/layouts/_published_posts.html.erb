@@ -7,7 +7,7 @@
           <h3><%= request.content %></h3>
           <% end %>
           <% if request.image.attached? %>
-          <%= image_tag request.image, :class=>"request-answered-image-home", :style=>"padding-top:8px" %>
+          <%= cl_image_tag(request.image.key,cloud_name: "dntx9ehds", class:"request-answered-image-home", style:"padding-top:8px") %>
           <% end %>
          
           <div class="answer-home" style="text-decoration:none !important">

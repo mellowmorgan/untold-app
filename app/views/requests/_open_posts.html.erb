@@ -3,8 +3,9 @@
     <%= link_to request_path(request) do %>
     <div class="open-request"><h3><%= request.content %> </h3><% end %>
     <% if request.image.attached? %>
-          <%= image_tag request.image, class:"request-open-image-show",alt:"image that goes with request: #{request.content}" %>
-          <% end %>
+          
+      <%= cl_image_tag(request.image.key, cloud_name: "dntx9ehds", class:"request-open-image-show",alt:"image that goes with request: #{request.content}") %>
+    <% end %>
     <div style="text-align:right"><button class="btn btn-light">Answer</button></div>
     </div>
   <% end %>

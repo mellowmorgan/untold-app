@@ -17,5 +17,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-
+//= require activestorage
 window.$ = window.jQuery = jQuery;
