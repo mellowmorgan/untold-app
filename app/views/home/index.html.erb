@@ -72,6 +72,7 @@
 console.log("test")
 $('.cloudinaryable-form').on('ajax:before', function(submitEvent) {
     if ($('.fileInput').fileupload('active') > 0) {
+      console.log("hit")
       submitEvent.preventDefault();
     }
 })
