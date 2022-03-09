@@ -1,11 +1,12 @@
 <% if requests_approved.any? %>
   <% requests_approved.each do |request| %>
     <%= link_to request_path(request) do %>
-    <div class="open-request"><h3><%= request.content %> </h3><% end %>
-    <% if request.image.attached? %>
-          <%= image_tag request.image, class:"request-open-image-show" %>
-          <% end %>
-    <div style="text-align:right"><button class="btn btn-light">Answer</button></div>
+      <div class="open-request"><h3><%= request.content %> </h3><% end %>
+      <% if request.image.attached? %>
+            
+      <%= image_tag(request.image, class:"request-open-image-home") %>
+      <% end %>
+      <div style="text-align:right"><%= button_to "Answer", request_path(request), method: :get, class:"btn btn-light"%></div>
     </div>
   <% end %>
   <% else %>
