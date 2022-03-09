@@ -51,7 +51,7 @@
     <% if request.image.attached? %>
           <%= cl_image_tag(request.image.key, cloud_name: "hkbjwypvm", class:"request-open-image-home", alt:"image that goes with request: #{request.content}") %>
           
-    <div style="text-align:right;"><%= button_to "Answer", request_path(request), class:"btn btn-light" %></div>
+    <div style="text-align:right;"><%= button_to "Answer", request_path(request),method: :get, class:"btn btn-light" %></div>
    </div>
    <% end %>
   <% end %>
