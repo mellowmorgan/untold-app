@@ -6,7 +6,7 @@
 
 <h5>Request Author: <%= link_to User.find(@request.user_id).username, root_path %></h5>
 <% if @request.image.attached? %>
-          <%= image_tag @request.image, class:"request-open-image-show" %>
+          <%= image_tag @request.image, class:"request-open-image-show", alt:"image that goes with request: #{request.content}" %>
           <% end %>
 
 <div class="add-description" style="margin-top:50px;">
