@@ -1,12 +1,12 @@
 <div class="my-container">
-<div class="author-username" style="width:60%; margin:auto; margin-top:50px;">
+  <div class="author-username" style="width:60%; margin:auto; margin-top:50px;">
 <%= flash[:notice] %>
 <%= flash[:alert] %>
 <h2><%= @request.content %></h2>
 
 <h5>Request Author: <%= link_to User.find(@request.user_id).username, root_path %></h5>
 <% if @request.image.attached? %>
-          <%= cl_image_tag(@request.image.key, cloud_name: "hkbjwypvm", class:"request-open-image-show", alt:"image that goes with request: #{@request.content}"
+          <%= cl_image_tag(@request.image.key, cloud_name: "hkbjwypvm", class:"request-open-image-show", alt:"image that goes with request: #{@request.content}" %>
 
 <div class="add-description" style="margin-top:50px;">
 
