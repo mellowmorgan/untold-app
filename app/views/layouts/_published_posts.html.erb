@@ -5,20 +5,17 @@
       <%= link_to request_path(request) do %>
         <div class="published-request">
           <h3><%= request.content %></h3>
-          <% end %>
-          <% if request.image.attached? %>
+      <% end %>
+        <% if request.image.attached? %>
           <%= cl_image_tag(request.image.key,cloud_name: "hkbjwypvm", alt:"image that goes with request: #{request.content}", class:"request-answered-image-home", style:"padding-top:8px") %>
-          <% end %>
+        <% end %>
          
-          <div class="answer-home" style="text-decoration:none !important">
+        <div class="answer-home" style="text-decoration:none !important">
             Answer: <%= request.descriptions.order(created_at: :desc).first.content %>
-          </div>
-            
-        </div>
-      
+        </div>    
+      </div>
     <% end %>
-
   <% else %>
- <div style="margin:40px;text-align:center;"> <h4>No requests found.</h4></div>
-<% end %>
+    <div style="margin:40px;text-align:center;"> <h4>No requests found.</h4></div>
+  <% end %>
 </div>

@@ -7,9 +7,8 @@ class Request < ApplicationRecord
   validates :content, presence: true
   validate :categories_must_exist
   validates :status, presence: true, inclusion: { in: ["submitted","approved","published","flagged","denied"]}
-  # before_save :grab_image
-  scope :most_recently_added_published, -> { where(status:"published").order(created_at: :desc).limit(7)}
-  scope :most_recently_added_all_published, -> { where(status:"published").order(created_at: :desc)}
+  scope :most_recently_added_published, -> { where(status:"published").order(updated_at: :desc).limit(7)}
+  scope :most_recently_added_all_published, -> { where(status:"published").order(updated_at: :desc)}
   scope :most_recently_added_all_approved, -> { where(status:"approved").order(created_at: :desc)}
   scope :most_recently_added_approved, -> { where(status:"approved").order(created_at: :desc).limit(7)}
   def downcase_categories
@@ -31,7 +30,6 @@ class Request < ApplicationRecord
           valid_checker=false
         end
       end
-    
       if self.categories.any? && !valid_checker
         errors.add(:categories, "You've entered an invalid category. Please include one or more of the following categories: people, popular, nature, miscellaneous, objects, history, film, photography, art, landmarks, buildings, animals")
       end

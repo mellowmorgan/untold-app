@@ -1,65 +1,62 @@
 <div class="my-container">
-<div class="row home-row">
-<div class="col-md-3 left-col">
-<div class="categories">
-<div class="title"><h3>Categories</h3></div>
-<div class="category"><%= link_to "All", root_path %></div>
-<div class="category"><%= link_to "Popular", fetch_open_posts_path(:category => "popular"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "Art", fetch_open_posts_path(:category => "art"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "Photography", fetch_open_posts_path(:category => "photography"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "Film", fetch_open_posts_path(:category => "film"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "Nature", fetch_open_posts_path(:category => "nature"), :remote => true,data: {type: "script"} %></div>
+  <div class="row home-row">
+    <div class="col-md-3 left-col">
+      <div class="categories">
+        <div class="title"><h3>Categories</h3></div>
+        <div class="category"><%= link_to "All", root_path %></div>
+        <div class="category"><%= link_to "Popular", fetch_open_posts_path(:category => "popular"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "Art", fetch_open_posts_path(:category => "art"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "Photography", fetch_open_posts_path(:category => "photography"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "Film", fetch_open_posts_path(:category => "film"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "Nature", fetch_open_posts_path(:category => "nature"), :remote => true,data: {type: "script"} %></div>
 
-<div class="category"><%= link_to "Landmarks", fetch_open_posts_path(:category => "landmarks"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "People", fetch_open_posts_path(:category => "people"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "Animals", fetch_open_posts_path(:category => "animals"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "Objects", fetch_open_posts_path(:category => "objects"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "Buildings", fetch_open_posts_path(:category => "buildings"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "History", fetch_open_posts_path(:category => "history"), :remote => true,data: {type: "script"} %></div>
-<div class="category"><%= link_to "Miscellaneous", fetch_open_posts_path(:category => "miscellaneous"), :remote => true,data: {type: "script"} %></div>
-</div>
-</div>
-<div class="col-md-9">
-
-<div class="open-requests-section">
-<div class="open-requests-home-section-title" style="margin-top:0;"> <%= image_tag("squiggle.png",size:"24x24",alt:"an image of a small cute squiggle just for decoration", style:"margin-right:6px;margin-bottom:10px")%><h3 style="display: inline;">Open Requests</h3></div>
-<%= flash[:notice] %>
-<%= flash[:alert] %>
-
-<div class="add-request">
-<div class="add-request-title-box">Add a Request</div>
-<div class="add-request-form">
-  <%= form_with(url: "/requests/open/add_request", method: :post, model: @request) do |f| %>
-    <div class="form-group">
-    <%= f.label "Request:" %><br />
-    <%= f.text_area :content, :class => 'form-control',  autocomplete: true, 
-    placeholder:"What does fire look like?" %><br />
-    <%= f.label "Upload an image (optional):"%><br />
-  <%= f.file_field :image, accept: 'image/png, image/gif, image/jpeg', style:"margin-bottom:8px;",direct_upload: true %><br />
-  <%= f.label "Or use an image address:"%>
-  <%= f.text_field :image_url, :class => 'form-control', autocomplete: true %>
-  <br />
-    <%= f.label "Tags (optional):" %><br />
-    <%= f.text_field :categories, :class => 'form-control', autocomplete: true, placeholder:"Example: miscellaneous, nature" %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.hidden_field :status, :value => "approved" %>
+        <div class="category"><%= link_to "Landmarks", fetch_open_posts_path(:category => "landmarks"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "People", fetch_open_posts_path(:category => "people"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "Animals", fetch_open_posts_path(:category => "animals"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "Objects", fetch_open_posts_path(:category => "objects"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "Buildings", fetch_open_posts_path(:category => "buildings"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "History", fetch_open_posts_path(:category => "history"), :remote => true,data: {type: "script"} %></div>
+        <div class="category"><%= link_to "Miscellaneous", fetch_open_posts_path(:category => "miscellaneous"), :remote => true,data: {type: "script"} %></div>
+      </div>
     </div>
-    <div>
-    <%= f.submit "Post", :class => "btn btn-light" %>
+    <div class="col-md-9">
+      <div class="open-requests-section">
+        <div class="open-requests-home-section-title" style="margin-top:0;"> <%= image_tag("squiggle.png",size:"24x24",alt:"an image of a small cute squiggle just for decoration", style:"margin-right:6px;margin-bottom:10px")%><h3 style="display: inline;">Open Requests</h3></div>
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+
+        <div class="add-request">
+          <div class="add-request-title-box">Add a Request</div>
+          <div class="add-request-form">
+            <%= form_with(url: "/requests/open/add_request", method: :post, model: @request) do |f| %>
+            <div class="form-group">
+              <%= f.label "Request:" %><br />
+              <%= f.text_area :content, :class => 'form-control',  autocomplete: true, 
+              placeholder:"What does fire look like?" %><br />
+              <%= f.label "Upload an image (optional):"%><br />
+              <%= f.file_field :image, accept: 'image/png, image/gif, image/jpeg', style:"margin-bottom:8px;",direct_upload: true %><br />
+              <%= f.label "Or use an image address:"%>
+              <%= f.text_field :image_url, :class => 'form-control', autocomplete: true %>
+              <br />
+              <%= f.label "Tags (optional):" %><br />
+              <%= f.text_field :categories, :class => 'form-control', autocomplete: true, placeholder:"Example: miscellaneous, nature" %>
+              <%= f.hidden_field :user_id, :value => current_user.id %>
+              <%= f.hidden_field :status, :value => "approved" %>
+            </div>
+            <div>
+              <%= f.submit "Post", :class => "btn btn-light" %>
+            </div>
+          <% end %>
+
+          </div>
+        </div>
+        <div id="open-requests-section">
+
+          <%= render partial: 'open_posts', locals: { requests_approved: @requests_approved} %>
+          <%= will_paginate @requests_approved %>
+        </div>
+
+      </div>
+    </div>
   </div>
-  <% end %>
-
-</div>
-</div>
-<div id="open-requests-section">
-
-<%= render partial: 'open_posts', locals: { requests_approved: @requests_approved} %>
-<%= will_paginate @requests_approved %>
-</div>
-
-</div>
-
-</div>
-
-</div>
 </div>

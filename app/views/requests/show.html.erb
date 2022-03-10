@@ -3,7 +3,6 @@
     <%= flash[:notice] %>
     <%= flash[:alert] %>
     <h2><%= @request.content %></h2>
-
     <h5>Request Author: <%= link_to User.find(@request.user_id).username, root_path %></h5>
     <% if @request.image.attached? %>
       <%= cl_image_tag(@request.image.key, cloud_name: "hkbjwypvm", class:"request-open-image-show", alt:"image that goes with request: #{@request.content}") %>
@@ -26,17 +25,16 @@
       <% end %>
     </div>
     </div>
-  <div style="margin-top:50px;margin-left:20px;"> <h4><%=@request.descriptions.length%> <% if @request.descriptions.length==1 %>Answer<% else %>Descriptions<% end %></h4></div>
-<div>
-<% if @request.status=="published" && @request.descriptions.any? %>
-  <% @request.descriptions.reverse.each do |desc| %>
-    <div class="published-desc">
-<%= desc.content %>
-    <h5>Description Author: <%= link_to User.find(desc.user_id).username, root_path %></h5>
+    <div style="margin-top:50px;margin-left:20px;"> <h4><%=@request.descriptions.length%> <% if @request.descriptions.length==1 %>Answer<% else %>Descriptions<% end %></h4></div>
+    <div>
+      <% if @request.status=="published" && @request.descriptions.any? %>
+        <% @request.descriptions.reverse.each do |desc| %>
+          <div class="published-desc">
+            <%= desc.content %>
+            <h5>Description Author: <%= link_to User.find(desc.user_id).username, root_path %></h5>
+          </div>
+        <% end %>
+      <% end %>
     </div>
-  <% end %>
-<% end %>
-</div>
-
-</div>
+  </div>
 </div>

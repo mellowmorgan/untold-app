@@ -1,26 +1,25 @@
 <div style="width:50%; min-width:400px; max-width:800px; margin:50px auto">
-<div class="help-holder">
-  <h3>Contact Us</h3>
+  <div class="help-holder">
+    <h3>Contact Us</h3>
   
-  <div class="help-form">
-  <p>Please submit any suggestions for our site, questions, or issues you may be having below.</p><br />
-  <%= form_with(url: help_send_path, method: :post) do |f| %>
-    <div class="form-group">
-    <%= f.label "Subject:" %><br />
-    <%= f.text_field :subject, :class => 'form-control', 
-    placeholder:"Subject" %>
+    <div class="help-form">
+      <p>Please submit any suggestions for our site, questions, or issues you may be having below.</p><br />
+      <%= form_with(url: help_send_path, method: :post) do |f| %>
+        <div class="form-group">
+          <%= f.label "Subject:" %><br />
+          <%= f.text_field :subject, :class => 'form-control', 
+      placeholder:"Subject" %>
+        </div>
+        <div class="form-group">
+          <%= f.label "Message:" %><br />
+          <%= f.text_area :message, :class => 'form-control', 
+      placeholder:"Explain your issue here." %>
+        </div>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <div>
+          <%= f.submit "Answer", :class => "btn btn-light" %>
+        </div>
+      <% end %>
     </div>
-    <div class="form-group">
-    <%= f.label "Message:" %><br />
-    <%= f.text_area :message, :class => 'form-control', 
-    placeholder:"Explain your issue here." %>
-    </div>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-    
-    
-    <div>
-    <%= f.submit "Answer", :class => "btn btn-light" %>
   </div>
-  <% end %>
-</div>
 </div>
