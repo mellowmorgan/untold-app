@@ -7,6 +7,11 @@ Created by: Morgan Waites
 
 Untold is a web application built with Ruby on Rails primarily for the vision-impaired to submit requests for people to describe visually an object, building, landmark, person, animals, image, work of art, etc. User must sign up to view homepage and submit requests and answer open requests with descriptions. Most recent published and open descriptions appear on the homepage. Untold app attempts to also meet accessibility requirements for the vision-impaired. Untold is still under development but can be viewed at http://untold-rails.herokuapp.com/ where it's hosted by Heroku, images served thanks to Cloudinary. 
 
+# Instructions
+
+* Go to http://untold-rails.herokuapp.com/
+* Sign in with email: admin@test.com and password admin123
+
 ## Technologies Used
 
 * Ruby 2.7
