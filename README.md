@@ -16,6 +16,7 @@ Untold is a web application built with Ruby on Rails primarily for the vision-im
 * PG
 * Bootstrap
 * HTML/CSS
+* Devise
 * Postman
 * open-uri
 * Webpacker
