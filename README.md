@@ -1,6 +1,6 @@
 # Untold
 
-A Ruby on Rails App
+A Ruby on Rails App<br>
 Created by: Morgan Waites
 
 ## About
