@@ -125,16 +125,18 @@ body{
 .categories{
   margin:auto;
   margin-bottom:50px;
+  max-width: 100%;
 }
 
 
-.categories .title{border-bottom: 2px solid black;width:fit-content;padding-left:10px;padding-right:10px;margin-bottom:20px;}
+.categories .title{border-bottom: 2px solid black;width:fit-content;padding-left:8px;padding-right:8px;margin-bottom:20px;}
+.categories .title h3{font-size: 23px;}
 .category{
   max-width:200px;
   margin:5px;
   border-radius:4px;
-  padding:10px;
-  font-size:19px;
+  padding:8px;
+  font-size:18px;
   font-family:sans-serif;
   min-width:fit-content;
 }
