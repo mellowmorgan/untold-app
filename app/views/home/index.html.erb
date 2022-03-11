@@ -12,6 +12,8 @@
           <%= form_with(url: "/requests/add_request", method: :post, model: @request, class:"cloudinaryable-form") do |f| %>
             <div class="form-group">
               <%= f.label "Request:" %><br />
+              <%= f.text_area :content, :class => 'form-control',  autocomplete: true, 
+  placeholder:"Example: What does fire look like?" %><br />
               <%= f.file_field :image, accept: 'image/png, image/gif, image/jpeg', cloud_name: "hkbjwypvm", style:"margin-bottom:8px;", class:"fileInput",direct_upload: true  %><br />
               <%= f.label "Or use an image address:"%>
               <%= f.text_field :image_url, :class => 'form-control fileInput', autocomplete: true %><br />
