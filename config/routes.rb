@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get "/fetch_open_posts", to: 'requests#from_open_category'
   get "/requests/open", to: 'requests#open'
   get "/requests/answered", to: 'requests#answered'
+  get '/about', to: 'home#about', as: 'about'
   post "requests/add_request", to: 'requests#add_request_home'
   post "requests/open/add_request", to: 'requests#add_request_open'
   # post "requests/:id/answer", to: 'requests#answer', as: 'answer_request'

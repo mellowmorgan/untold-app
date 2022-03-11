@@ -21,6 +21,9 @@ class HomeController < ApplicationController
   def help
     render :contact
   end
+  def about
+    render :about
+  end
   def help_send
     ContactMailer.send_email.deliver_now
     flash[:notice] = "Your message has been sent. Thank you."

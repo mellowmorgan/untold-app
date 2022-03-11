@@ -45,6 +45,24 @@ label{
   border: solid 1px #dee0e1;
   font-family:sans-serif;
 }
+.about-holder{
+  padding:45px;
+  min-height:150px;
+  background:white;
+  border: solid 1px #dee0e1;
+  font-family:sans-serif;
+}
+.about-holder p, .about-holder a, .about-holder li{
+  font-size: 18px;
+}
+.about-holder a, .about-holder a:visited{
+  color:darkred;
+  font-weight:bold;
+}
+.about-holder a:hover,.about-holder a:active{
+  color:rgb(203, 42, 14);
+  font-weight:bold;
+}
 .help-holder h3{
   margin-top:0;
 }
@@ -163,15 +181,7 @@ label{
 .category:hover{
   background:rgb(220, 220, 220);
 }
-.heart-like-svg{
-  height:30px;
-}
-.heart-like-svg:hover{
-  fill: rgb(205, 22, 22);
-}
-.heart-like-red{
-  fill: rgb(205, 22, 22);
-}
+
 .add-request-title-box{
   border-bottom: solid 1px #dee0e1;
   padding: 15px;
@@ -388,5 +398,5 @@ h5{font-size:17px;}
     }
 }
 .links-nav a:hover{
-  color:rgb(194, 47, 21);
+  color:rgb(203, 42, 14);
 }
