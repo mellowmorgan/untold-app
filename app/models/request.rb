@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'csv'
 class Request < ApplicationRecord
   has_one_attached :image
   belongs_to :user
@@ -21,7 +22,7 @@ class Request < ApplicationRecord
       self.status = "approved"
     end
   end
-
+  
   def grab_image
     if self.image_url
       
