@@ -8,7 +8,7 @@
       <%= flash[:alert] %>
       <div class="add-request">
         <div class="add-request-title-box">Add a Request</div>
-        <div class="add-request-form">
+        <div id="maincontent" class="add-request-form">
           <%= form_with(url: "/requests/add_request", method: :post, model: @request, class:"cloudinaryable-form") do |f| %>
             <div class="form-group">
               <%= f.label "Request:" %><br />

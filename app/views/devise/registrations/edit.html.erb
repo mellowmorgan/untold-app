@@ -1,5 +1,5 @@
 <div style="width:50%; min-width:400px; max-width:800px; margin:50px auto">
-<div class="help-holder">
+<div id="maincontent" class="help-holder">
 <h3>Edit Account</h3>
 
 <div class="help-form">
@@ -22,7 +22,6 @@
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "new-password",:class => 'form-control' %>
     <% if @minimum_password_length %>
-      <br />
       <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>

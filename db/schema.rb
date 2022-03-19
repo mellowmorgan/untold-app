@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_08_073112) do
+ActiveRecord::Schema.define(version: 2022_03_12_194757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,12 @@ ActiveRecord::Schema.define(version: 2022_03_08_073112) do
     t.datetime "updated_at", null: false
     t.string "categories", default: [], array: true
     t.string "image_url"
+    t.index ["id"], name: "index_requests_on_id"
+    t.index ["id"], name: "requests_id_idx"
+    t.index ["id"], name: "requests_id_idx1"
+    t.index ["id"], name: "requests_id_idx2"
+    t.index ["status"], name: "index_requests_on_status"
+    t.index ["status"], name: "requests_status_idx"
   end
 
   create_table "users", force: :cascade do |t|

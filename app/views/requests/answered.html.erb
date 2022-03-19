@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="col-md-9">
-      <div class="answered-requests-section">
+      <div id="maincontent" class="answered-requests-section">
         <%= render partial: 'answered_posts', locals: { requests_published: @requests_published} %>
         <%= will_paginate @requests_published %>
       </div>
